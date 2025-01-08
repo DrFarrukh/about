@@ -3,206 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Muhammad Farrukh Qureshi - Portfolio</title>
+    <title>Dr. Muhammad Farrukh Qureshi - Profile</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/theme.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">Dr. M. F. Qureshi</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Dr. Muhammad Farrukh Qureshi</h1>
-            <h2>Assistant Professor in Electrical Engineering</h2>
-            <p>Specializing in Deep Learning and Signal Processing</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn primary">Contact Me</a>
-                <a href="#research" class="btn secondary">View Research</a>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Dr. Muhammad Farrukh Qureshi</h1>
+                <p class="subtitle">Assistant Professor in Electrical Engineering</p>
+                <p class="pec">PEC# ELECTRO-16864</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text" style="text-align: justify;">
-                    <p>I am an Assistant Professor in the Electrical Engineering Department with a concurrent role as a Senior Researcher at the Centre of AI and Big Data, at Namal University, Mianwali. My work revolves around teaching, mentoring, and managing research activities, while actively contributing to projects with a focus on industrial collaborations, research and development, and emerging commercialization opportunities.</p>
+        <section class="stats-container">
+            <div class="stat-item">
+                <div class="number">9+</div>
+                <div class="label">Years Teaching Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">15+</div>
+                <div class="label">Journal Publications</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">214</div>
+                <div class="label">Citations</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">10+</div>
+                <div class="label">Research Projects</div>
+            </div>
+        </section>
 
-                    <p>With a PhD in Electrical Engineering from Riphah International University, my research expertise lies in deep learning and its applications in biomedical engineering, particularly EMG signal analysis. Over the years, I have contributed to numerous peer-reviewed publications and have been part of impactful projects in AI, machine learning, and embedded systems.</p>
-                        
-                    <p>My interests include developing AI-driven solutions for healthcare, agriculture, and industrial sectors, with a focus on bridging theoretical advancements and practical implementation. I am committed to fostering innovation through research, development, and strategic partnerships.</p>
-                    <div class="credentials">
-                        <div class="credential-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>PhD in Electrical Engineering</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-university"></i>
-                            <span>PEC# ELECTRO-16864</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="section-header">
+            <h2>Research Areas</h2>
+            <p>Specializing in Deep Learning, Signal Processing, and Biomedical Applications</p>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>PhD in Electrical Engineering</h3>
-                        <p class="timeline-date">2019-2024</p>
-                        <p>Riphah International University, Islamabad</p>
-                        <p>Specialization in Deep Learning</p>
-                        <p>Dissertation: Classification of Physiological Signals for Human Computer Interaction using Deep Learning</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>MS in Electrical Engineering</h3>
-                        <p class="timeline-date">2012-2014</p>
-                        <p>Riphah International University, Islamabad</p>
-                        <p>Specialization in Digital Signal Processing</p>
-                        <p>Dissertation: Time-Frequency Signal Processing of Self-Mixing Laser Sensor for Vibration Measurement</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>BS in Electronics Engineering</h3>
-                        <p class="timeline-date">2008-2012</p>
-                        <p>International Islamic University, Islamabad</p>
-                        <p>Dissertation: Automatic Secured Storage Machine</p>
-                    </div>
-                </div>
+        <section class="card-grid">
+            <div class="card">
+                <i class="fas fa-brain card-icon"></i>
+                <h3>Deep Learning</h3>
+                <p>Developing advanced neural networks for signal classification and pattern recognition</p>
             </div>
-        </div>
-    </section>
+            <div class="card">
+                <i class="fas fa-wave-square card-icon"></i>
+                <h3>Signal Processing</h3>
+                <p>Time-frequency analysis and processing of biomedical signals</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-heartbeat card-icon"></i>
+                <h3>Biomedical Applications</h3>
+                <p>Healthcare solutions using AI and signal processing techniques</p>
+            </div>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-item">
-                    <h3>Assistant Professor</h3>
-                    <p class="company">Namal University, Mianwali</p>
-                    <p class="date">Sep 2024 - Present</p>
-                    <ul>
-                        <li>Developed new curriculum on "Robotics and Intelligent Systems"</li>
-                        <li>Provided support to revise electrical and computer systems curriculum</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>Senior Lecturer</h3>
-                    <p class="company">Riphah International University, Islamabad</p>
-                    <p class="date">May 2015 - Aug 2024</p>
-                    <ul>
-                        <li>Developed innovative final year projects</li>
-                        <li>Mentored undergraduate students in research projects</li>
-                        <li>Organized workshops in collaboration with Pakistan Engineering Council</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="section-header">
+            <h2>Education</h2>
+            <p>Academic Background and Specializations</p>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Dynamically populated by JavaScript -->
+        <section class="card-grid">
+            <div class="card">
+                <h3>PhD in Electrical Engineering</h3>
+                <p class="year">2019-2024</p>
+                <p class="institution">Riphah International University</p>
+                <p class="specialization">Deep Learning Applications</p>
             </div>
-        </div>
-    </section>
+            <div class="card">
+                <h3>MS in Electrical Engineering</h3>
+                <p class="year">2012-2014</p>
+                <p class="institution">Riphah International University</p>
+                <p class="specialization">Digital Signal Processing</p>
+            </div>
+            <div class="card">
+                <h3>BS in Electronics Engineering</h3>
+                <p class="year">2008-2012</p>
+                <p class="institution">International Islamic University</p>
+                <p class="specialization">Electronics and Communication</p>
+            </div>
+        </section>
+    </main>
 
-    <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <h2 class="section-title">Research Publications</h2>
-            <div class="research-stats">
-                <div class="stat-item">
-                    <h3>214</h3>
-                    <p>Citations</p>
-                </div>
-                <div class="stat-item">
-                    <h3>9</h3>
-                    <p>h-index</p>
-                </div>
-                <div class="stat-item">
-                    <h3>20+</h3>
-                    <p>Publications</p>
-                </div>
-            </div>
-            <div class="publications-list">
-                <!-- Publications will be loaded dynamically via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>dr.farrukh89@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>Not Listed</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Namal University<br>Mianwali, Punjab, Pakistan</p>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-social">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-google-scholar"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-researchgate"></i></a>
-                </div>
-                <p>&copy; 2024 Dr. Muhammad Farrukh Qureshi. All rights reserved.</p>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2024 Dr. Muhammad Farrukh Qureshi. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

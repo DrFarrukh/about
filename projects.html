@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Dr. Muhammad Farrukh Qureshi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/theme.js"></script>
+    <script src="js/projects.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Research Projects</h1>
+                <p class="subtitle">Innovative Solutions and Technological Advancement</p>
+            </div>
+        </section>
+
+        <section class="search-sort-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="project-search" placeholder="Search projects by title, year, or technology...">
+            </div>
+            <div class="sort-box">
+                <label for="sort-projects">Sort by:</label>
+                <select id="sort-projects">
+                    <option value="year-desc">Year (Newest First)</option>
+                    <option value="year-asc">Year (Oldest First)</option>
+                    <option value="title">Title</option>
+                    <option value="status">Status</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="stats-container">
+            <div class="stat-item">
+                <div class="number">10+</div>
+                <div class="label">Active Projects</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">3</div>
+                <div class="label">Research Grants</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">6</div>
+                <div class="label">Student Teams</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">4</div>
+                <div class="label">Industry Partners</div>
+            </div>
+        </section>
+
+        <section class="section-header">
+            <h2>Current Projects</h2>
+            <p>Ongoing Research and Development</p>
+        </section>
+
+        <section class="card-grid">
+            <div class="card project-card">
+                <div class="status-badge">Active</div>
+                <i class="fas fa-gas-pump card-icon"></i>
+                <h3>Blockchain-Backed Fuel Monitoring</h3>
+                <p class="year">2023-2024</p>
+                <p>Fraud Detection During Refuelling using Blockchain Technology</p>
+                <div class="tech-stack">
+                    <span>Blockchain</span>
+                    <span>IoT</span>
+                    <span>Smart Contracts</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge">Active</div>
+                <i class="fas fa-wind card-icon"></i>
+                <h3>Air Quality Monitoring</h3>
+                <p class="year">2023-2024</p>
+                <p>Air Quality Monitoring and Prediction Using Deep Learning for Pakistan</p>
+                <div class="tech-stack">
+                    <span>Deep Learning</span>
+                    <span>Sensors</span>
+                    <span>Data Analysis</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge">Active</div>
+                <i class="fas fa-pills card-icon"></i>
+                <h3>Tablet Manufacturing QC</h3>
+                <p class="year">2023-2024</p>
+                <p>Tablet Manufacturing and Quality Control using Machine Learning</p>
+                <div class="tech-stack">
+                    <span>Machine Learning</span>
+                    <span>Computer Vision</span>
+                    <span>Quality Control</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge">Active</div>
+                <i class="fas fa-user-tie card-icon"></i>
+                <h3>Dress Code Classification</h3>
+                <p class="year">2023-2024</p>
+                <p>Dress Code Classification and Face Detection using Deep Learning</p>
+                <div class="tech-stack">
+                    <span>Deep Learning</span>
+                    <span>Computer Vision</span>
+                    <span>Face Detection</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-header">
+            <h2>Completed Projects</h2>
+            <p>Successfully Delivered Research Work</p>
+        </section>
+
+        <section class="card-grid">
+            <div class="card project-card">
+                <div class="status-badge completed">Completed</div>
+                <i class="fas fa-video card-icon"></i>
+                <h3>Vision-based Fight Detection</h3>
+                <p class="year">2022-2023</p>
+                <p>Vision-based Fight detection from Surveillance Cameras using Deep Learning</p>
+                <div class="tech-stack">
+                    <span>Computer Vision</span>
+                    <span>Deep Learning</span>
+                    <span>Real-time Processing</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge completed">Completed</div>
+                <i class="fas fa-seedling card-icon"></i>
+                <h3>Weed Detection System</h3>
+                <p class="year">2022-2023</p>
+                <p>Weed detection and Spot Spraying System using Deep Learning</p>
+                <div class="tech-stack">
+                    <span>Image Processing</span>
+                    <span>IoT</span>
+                    <span>Automation</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge completed">Completed</div>
+                <i class="fas fa-heartbeat card-icon"></i>
+                <h3>Cardiopulmonary Disease Diagnosis</h3>
+                <p class="year">2022-2023</p>
+                <p>Early Diagnosis of Cardiopulmonary Diseases using Deep Learning</p>
+                <div class="tech-stack">
+                    <span>Deep Learning</span>
+                    <span>Medical Imaging</span>
+                    <span>Disease Detection</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge completed">Completed</div>
+                <i class="fas fa-drone card-icon"></i>
+                <h3>UAV Pesticide Spraying</h3>
+                <p class="year">2021-2022</p>
+                <p>Unmanned Aerial Vehicle for Pesticide Spraying</p>
+                <div class="tech-stack">
+                    <span>Drone Technology</span>
+                    <span>Control Systems</span>
+                    <span>Agriculture</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge completed">Completed</div>
+                <i class="fas fa-wave-square card-icon"></i>
+                <h3>Real-Time Signal Processing</h3>
+                <p class="year">2020-2021</p>
+                <p>Real-Time Signal Processing of Self-Mixing by Using Wavelets Transform</p>
+                <div class="tech-stack">
+                    <span>Signal Processing</span>
+                    <span>Wavelets</span>
+                    <span>Real-time Analysis</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge completed">Completed</div>
+                <i class="fas fa-plug card-icon"></i>
+                <h3>IoT Smart Energy Meter</h3>
+                <p class="year">2018-2019</p>
+                <p>IoT Based Smart Energy Meter</p>
+                <div class="tech-stack">
+                    <span>IoT</span>
+                    <span>Energy Monitoring</span>
+                    <span>Smart Home</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge completed">Completed</div>
+                <i class="fas fa-baby card-icon"></i>
+                <h3>Internet Accessible Incubator</h3>
+                <p class="year">2017-2018</p>
+                <p>Android Based Internet Accessible Infant Incubator</p>
+                <div class="tech-stack">
+                    <span>Android</span>
+                    <span>IoT</span>
+                    <span>Healthcare</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="status-badge completed">Completed</div>
+                <i class="fas fa-heart card-icon"></i>
+                <h3>IoT Health Monitoring</h3>
+                <p class="year">2017-2018</p>
+                <p>IoT Based Health Monitoring System</p>
+                <div class="tech-stack">
+                    <span>IoT</span>
+                    <span>Healthcare</span>
+                    <span>Sensors</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-header">
+            <h2>Technical Skills</h2>
+            <p>Tools and Technologies</p>
+        </section>
+
+        <section class="card-grid">
+            <div class="card skill-card">
+                <i class="fas fa-code card-icon"></i>
+                <h3>Programming</h3>
+                <ul class="skill-list">
+                    <li>Python</li>
+                    <li>MATLAB</li>
+                    <li>C/C++</li>
+                    <li>TensorFlow & Keras</li>
+                </ul>
+            </div>
+
+            <div class="card skill-card">
+                <i class="fas fa-chart-line card-icon"></i>
+                <h3>Data Science</h3>
+                <ul class="skill-list">
+                    <li>Pandas</li>
+                    <li>Matplotlib</li>
+                    <li>Seaborn</li>
+                    <li>Statistical Analysis</li>
+                </ul>
+            </div>
+
+            <div class="card skill-card">
+                <i class="fas fa-tools card-icon"></i>
+                <h3>Tools & Technologies</h3>
+                <ul class="skill-list">
+                    <li>Git & GitHub</li>
+                    <li>LaTeX</li>
+                    <li>Jetson Nano</li>
+                    <li>Signal Processing</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dr. Muhammad Farrukh Qureshi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
