@@ -146,7 +146,9 @@ function Hero() {
         <p className="hero-affiliation">
           {p.title}
           <br />
-          <span>{p.college} · NUST, Karachi</span>
+          <span>
+            {p.institution} · {p.location}
+          </span>
         </p>
         <div className="actions">
           <a className="button primary" href="#publications">
@@ -236,36 +238,41 @@ function Research() {
       >
         <p>{data.personal.bio}</p>
       </SectionHeading>
-      <div className="research-grid">
-        {data.researchAreas.map((area, i) => (
-          <article className="research-card" key={area.title}>
-            <span className="card-index">0{i + 1}</span>
-            <h3>{area.title}</h3>
-            <p>{area.description}</p>
-            <div className="tags">
-              {area.tags.map((tag) => (
-                <span key={tag}>{tag}</span>
+      <details className="section-details">
+        <summary>Explore research areas and workflow</summary>
+        <div className="expanded-content">
+          <div className="research-grid">
+            {data.researchAreas.map((area, i) => (
+              <article className="research-card" key={area.title}>
+                <span className="card-index">0{i + 1}</span>
+                <h3>{area.title}</h3>
+                <p>{area.description}</p>
+                <div className="tags">
+                  {area.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="pipeline">
+            <span className="eyebrow">THE RESEARCH WORKFLOW</span>
+            <ol>
+              {data.researchPipeline.map((stage, i) => (
+                <li key={stage}>
+                  <span>0{i + 1}</span>
+                  {stage}
+                  {i < 4 && <ArrowRight size={15} />}
+                </li>
               ))}
-            </div>
-          </article>
-        ))}
-      </div>
-      <div className="pipeline">
-        <span className="eyebrow">THE RESEARCH WORKFLOW</span>
-        <ol>
-          {data.researchPipeline.map((stage, i) => (
-            <li key={stage}>
-              <span>0{i + 1}</span>
-              {stage}
-              {i < 4 && <ArrowRight size={15} />}
-            </li>
-          ))}
-        </ol>
-        <p>
-          Joint optimization of accuracy, latency, memory and energy. FPGA and
-          RISC-V acceleration are developing research directions.
-        </p>
-      </div>
+            </ol>
+            <p>
+              Joint optimization of accuracy, latency, memory and energy. FPGA
+              and RISC-V acceleration are developing research directions.
+            </p>
+          </div>
+        </div>
+      </details>
     </section>
   );
 }
@@ -320,135 +327,152 @@ function Publications() {
             View Google Scholar <ArrowUpRight size={16} />
           </a>
         </SectionHeading>
-        <div className="publication-toolbar">
-          <label className="search-field">
-            <Search size={18} />
-            <span className="sr-only">Search publications</span>
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search title, venue, topic or DOI…"
-              type="search"
-            />
-          </label>
-          <label>
-            <span className="sr-only">Publication year</span>
-            <select value={year} onChange={(e) => setYear(e.target.value)}>
-              <option value="all">All years</option>
-              {years.map((y) => (
-                <option key={y} value={y}>
-                  {y}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">Publication type</span>
-            <select value={type} onChange={(e) => setType(e.target.value)}>
-              <option value="all">All types</option>
-              <option value="journal">Journal</option>
-              <option value="conference">Conference</option>
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">Publication status</span>
-            <select value={status} onChange={(e) => setStatus(e.target.value)}>
-              <option value="all">All statuses</option>
-              {[...new Set(data.publications.map((p) => p.status))].map(
-                (value) => (
-                  <option key={value} value={value}>
-                    {value}
-                  </option>
-                ),
-              )}
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">Sort publications</span>
-            <select value={sort} onChange={(e) => setSort(e.target.value)}>
-              <option value="year">Newest first</option>
-              <option value="citations">Most cited</option>
-            </select>
-          </label>
-        </div>
-        <p className="results-count" aria-live="polite">
-          {records.length} of {data.publications.length} records
-        </p>
-        <div className="publication-list">
-          {records.map((p) => (
-            <article className="publication" key={p.id}>
-              <span className="publication-year">{p.year}</span>
-              <div>
-                <div className="publication-meta">
-                  <span>{p.type === "journal" ? "JOURNAL" : "CONFERENCE"}</span>
-                  <span>{p.area}</span>
-                  {p.status === "Accepted" && (
-                    <span className="badge accepted">Accepted</span>
-                  )}
-                </div>
-                <h3>{p.title}</h3>
-                <p className="publication-authors">{p.authors.join(", ")}</p>
-                <p>
-                  {p.scholarVenue}{" "}
-                  <span className="muted">· {p.contribution}</span>
-                </p>
-                {p.citations !== null && (
-                  <p className="citation-count">
-                    {p.citations}
-                    {p.citationsCombined ? "*" : ""} citations
-                  </p>
-                )}
-                {p.publishedDate && (
-                  <p>
-                    Published {publicationDate(p.publishedDate)} ·{" "}
-                    {p.publicationStage}
-                  </p>
-                )}
-                {p.publisherUrl && (
-                  <a className="text-link" href={p.publisherUrl} {...external}>
-                    Publisher article <ArrowUpRight size={13} />
-                  </a>
-                )}
-                {p.doi && (
-                  <a
-                    className="doi"
-                    href={`https://doi.org/${p.doi}`}
-                    {...external}
-                  >
-                    {p.doi} <ArrowUpRight size={13} />
-                  </a>
-                )}
-                {!p.doi && <span className="muted small">DOI not listed</span>}
-              </div>
-              {p.doi && (
-                <a
-                  className="paper-link"
-                  href={`https://doi.org/${p.doi}`}
-                  {...external}
-                  aria-label={`Open paper: ${p.title}`}
+        <details className="section-details">
+          <summary>Browse publications ({data.publications.length})</summary>
+          <div className="expanded-content">
+            <div className="publication-toolbar">
+              <label className="search-field">
+                <Search size={18} />
+                <span className="sr-only">Search publications</span>
+                <input
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search title, venue, topic or DOI…"
+                  type="search"
+                />
+              </label>
+              <label>
+                <span className="sr-only">Publication year</span>
+                <select value={year} onChange={(e) => setYear(e.target.value)}>
+                  <option value="all">All years</option>
+                  {years.map((y) => (
+                    <option key={y} value={y}>
+                      {y}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                <span className="sr-only">Publication type</span>
+                <select value={type} onChange={(e) => setType(e.target.value)}>
+                  <option value="all">All types</option>
+                  <option value="journal">Journal</option>
+                  <option value="conference">Conference</option>
+                </select>
+              </label>
+              <label>
+                <span className="sr-only">Publication status</span>
+                <select
+                  value={status}
+                  onChange={(e) => setStatus(e.target.value)}
                 >
-                  <ArrowUpRight size={22} />
-                </a>
-              )}
-            </article>
-          ))}
-        </div>
-        {records.length === 0 && (
-          <p className="empty-state">
-            No matching publications. Try another search or clear the filters.
-          </p>
-        )}
-        <p className="source-note">
-          Titles, author previews, publication years and citations follow your
-          Google Scholar snapshot (8 October 2026): {data.metrics.citations}{" "}
-          citations, h-index {data.metrics.hIndex}, i10-index{" "}
-          {data.metrics.i10Index}. DOI details follow the 2026 CV and publisher
-          updates. The EEG co-design article was published by Scientific Reports
-          on 23 September 2026 as an early, citable version with a permanent
-          DOI. An asterisk preserves Scholar’s combined-citation marker; an
-          ellipsis indicates a truncated author list. See Scholar for live
-          updates.
-        </p>
+                  <option value="all">All statuses</option>
+                  {[...new Set(data.publications.map((p) => p.status))].map(
+                    (value) => (
+                      <option key={value} value={value}>
+                        {value}
+                      </option>
+                    ),
+                  )}
+                </select>
+              </label>
+              <label>
+                <span className="sr-only">Sort publications</span>
+                <select value={sort} onChange={(e) => setSort(e.target.value)}>
+                  <option value="year">Newest first</option>
+                  <option value="citations">Most cited</option>
+                </select>
+              </label>
+            </div>
+            <p className="results-count" aria-live="polite">
+              {records.length} of {data.publications.length} records
+            </p>
+            <div className="publication-list">
+              {records.map((p) => (
+                <article className="publication" key={p.id}>
+                  <span className="publication-year">{p.year}</span>
+                  <div>
+                    <div className="publication-meta">
+                      <span>
+                        {p.type === "journal" ? "JOURNAL" : "CONFERENCE"}
+                      </span>
+                      <span>{p.area}</span>
+                      {p.status === "Accepted" && (
+                        <span className="badge accepted">Accepted</span>
+                      )}
+                    </div>
+                    <h3>{p.title}</h3>
+
+                    <p>
+                      {p.scholarVenue}{" "}
+                      <span className="muted">· {p.contribution}</span>
+                    </p>
+                    {p.citations !== null && (
+                      <p className="citation-count">
+                        {p.citations}
+                        {p.citationsCombined ? "*" : ""} citations
+                      </p>
+                    )}
+                    {p.publishedDate && (
+                      <p>
+                        Published {publicationDate(p.publishedDate)} ·{" "}
+                        {p.publicationStage}
+                      </p>
+                    )}
+                    {p.publisherUrl && (
+                      <a
+                        className="text-link"
+                        href={p.publisherUrl}
+                        {...external}
+                      >
+                        Publisher article <ArrowUpRight size={13} />
+                      </a>
+                    )}
+                    {p.doi && (
+                      <a
+                        className="doi"
+                        href={`https://doi.org/${p.doi}`}
+                        {...external}
+                      >
+                        {p.doi} <ArrowUpRight size={13} />
+                      </a>
+                    )}
+                    {!p.doi && (
+                      <span className="muted small">DOI not listed</span>
+                    )}
+                  </div>
+                  {p.doi && (
+                    <a
+                      className="paper-link"
+                      href={`https://doi.org/${p.doi}`}
+                      {...external}
+                      aria-label={`Open paper: ${p.title}`}
+                    >
+                      <ArrowUpRight size={22} />
+                    </a>
+                  )}
+                </article>
+              ))}
+            </div>
+            {records.length === 0 && (
+              <p className="empty-state">
+                No matching publications. Try another search or clear the
+                filters.
+              </p>
+            )}
+            <p className="source-note">
+              Publication years and citation metrics follow the Google Scholar
+              snapshot (8 October 2026): {data.metrics.citations} citations,
+              h-index {data.metrics.hIndex}, i10-index {data.metrics.i10Index}.
+              DOI details follow the 2026 CV and publisher updates. The EEG
+              co-design article was published by Scientific Reports on 23
+              September 2026 as an early, citable version with a permanent DOI.
+              An asterisk preserves Scholar’s combined-citation marker. Full
+              author lists are available through the paper links. See Scholar
+              for live updates.
+            </p>
+          </div>
+        </details>
       </div>
     </section>
   );
@@ -460,7 +484,7 @@ function Projects() {
   const records = data.projects.filter(
     (p) =>
       p.role === role &&
-      `${p.name} ${p.title} ${p.batch}`
+      `${p.title} ${p.status} ${p.degree}`
         .toLowerCase()
         .includes(query.trim().toLowerCase()),
   );
@@ -468,7 +492,7 @@ function Projects() {
     <section id="projects" className="section container">
       <SectionHeading
         number="03"
-        eyebrow="ACTIVE POSTGRADUATE PROJECTS"
+        eyebrow="POSTGRADUATE RESEARCH"
         title="Questions worth pursuing."
       >
         <p>
@@ -476,73 +500,74 @@ function Projects() {
           as a member of the Guidance and Evaluation Committee (GEC).
         </p>
       </SectionHeading>
-      <div className="project-controls">
-        <div
-          className="segmented"
-          role="group"
-          aria-label="Project responsibility"
-        >
-          {["Supervisor / Advisor", "GEC Member"].map((value) => (
-            <button
-              key={value}
-              aria-pressed={role === value}
-              className={role === value ? "selected" : ""}
-              onClick={() => setRole(value)}
+      <details className="section-details">
+        <summary>Explore research projects ({data.projects.length})</summary>
+        <div className="expanded-content">
+          <div className="project-controls">
+            <div
+              className="segmented"
+              role="group"
+              aria-label="Project responsibility"
             >
-              {value}{" "}
-              <span>
-                {data.projects.filter((p) => p.role === value).length}
-              </span>
-            </button>
-          ))}
+              {["Supervisor / Advisor", "GEC Member"].map((value) => (
+                <button
+                  key={value}
+                  aria-pressed={role === value}
+                  className={role === value ? "selected" : ""}
+                  onClick={() => setRole(value)}
+                >
+                  {value}{" "}
+                  <span>
+                    {data.projects.filter((p) => p.role === value).length}
+                  </span>
+                </button>
+              ))}
+            </div>
+            <label className="search-field">
+              <Search size={17} />
+              <span className="sr-only">Search projects</span>
+              <input
+                type="search"
+                placeholder="Search research topic…"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+            </label>
+          </div>
+          <p className="results-count" aria-live="polite">
+            {records.length}{" "}
+            {role === "GEC Member"
+              ? "committee projects"
+              : "supervised MS projects"}
+          </p>
+          <div className="project-grid">
+            {records.map((p, i) => (
+              <article className="project-card" key={p.id}>
+                <div className="project-top">
+                  <span className="card-index">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    className={`badge ${p.status === "Completed" ? "completed" : ""}`}
+                  >
+                    <span className="live-dot" /> {p.status}
+                  </span>
+                </div>
+                <h3>{p.title}</h3>
+                <p className="small">{p.degree} research</p>
+                <div className="project-role">{p.role}</div>
+              </article>
+            ))}
+          </div>
+          {records.length === 0 && (
+            <p className="empty-state">No matching projects.</p>
+          )}
+          <p className="source-note">
+            GEC participation is committee service. These projects are listed
+            separately from research supervision.
+          </p>
         </div>
-        <label className="search-field">
-          <Search size={17} />
-          <span className="sr-only">Search projects</span>
-          <input
-            type="search"
-            placeholder="Search student or project…"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-        </label>
-      </div>
-      <p className="results-count" aria-live="polite">
-        {records.length}{" "}
-        {role === "GEC Member"
-          ? "committee projects"
-          : "supervised MS projects"}
-      </p>
-      <div className="project-grid">
-        {records.map((p, i) => (
-          <article className="project-card" key={p.registration}>
-            <div className="project-top">
-              <span className="card-index">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="badge">
-                <span className="live-dot" /> {p.status}
-              </span>
-            </div>
-            <h3>{p.title}</h3>
-            <div className="project-person">
-              <strong>{p.name}</strong>
-              <span>
-                {p.batch} · {p.degree}
-              </span>
-              <span>Reg. {p.registration}</span>
-            </div>
-            <div className="project-role">{p.role}</div>
-          </article>
-        ))}
-      </div>
-      {records.length === 0 && (
-        <p className="empty-state">No matching projects.</p>
-      )}
-      <p className="source-note">
-        GEC participation is committee service. These projects are listed
-        separately from research supervision.
-      </p>
+      </details>
     </section>
   );
 }
@@ -554,47 +579,40 @@ function Group() {
         <SectionHeading
           number="04"
           eyebrow="RESEARCH & MENTORSHIP"
-          title="People behind the work."
+          title="Research supervision."
         >
           <p>
-            AI/ML Research Cluster · EPE, PNEC, NUST. The exact current MS
-            supervision list appears in the projects section. PhD supervision
-            below includes ongoing co-supervision at Riphah.
+            Anonymous research directions and stages. Eight MS projects and four
+            PhD research directions, with supervision and committee roles shown
+            separately.
           </p>
         </SectionHeading>
-        <div className="group-grid">
-          {data.phdSupervisions.map((p) => (
-            <article className="group-card" key={p.name}>
-              <div className="monogram" aria-hidden="true">
-                {p.name
-                  .split(" ")
-                  .slice(0, 2)
-                  .map((n) => n[0])
-                  .join("")}
-              </div>
-              <span className="badge">{p.role}</span>
-              <h3>{p.name}</h3>
-              <p className="small">
-                {p.degree} · {p.institution}
-              </p>
-              <p>{p.topic}</p>
-              <span className="muted small">{p.status}</span>
-            </article>
-          ))}
-        </div>
-        <details className="undergraduate">
-          <summary>
-            Selected undergraduate project supervision{" "}
-            <span>View projects +</span>
-          </summary>
-          <ul>
-            {data.undergraduateProjects.map((p) => (
-              <li key={p.title}>
-                <span>{p.period}</span>
-                {p.title}
-              </li>
-            ))}
-          </ul>
+        <details className="section-details">
+          <summary>View anonymous supervision summaries</summary>
+          <div className="expanded-content">
+            <div className="group-grid">
+              {data.phdSupervisions.map((p) => (
+                <article className="group-card" key={p.id}>
+                  <span className="badge">{p.role}</span>
+                  <h3>{p.label}</h3>
+                  <p className="small">{p.degree}</p>
+                  <p>{p.topic}</p>
+                  <span className="muted small">{p.status}</span>
+                </article>
+              ))}
+            </div>
+            <details className="undergraduate">
+              <summary>
+                Selected undergraduate project supervision{" "}
+                <span>View projects +</span>
+              </summary>
+              <ul>
+                {data.undergraduateProjects.map((p) => (
+                  <li key={p.title}>{p.title}</li>
+                ))}
+              </ul>
+            </details>
+          </div>
         </details>
       </div>
     </section>
@@ -613,48 +631,49 @@ function CV() {
           View & print academic CV <FileDown size={17} />
         </a>
       </SectionHeading>
-      <div className="journey-grid">
-        {["position", "education"].map((type) => (
-          <div key={type}>
-            <h3 className="column-title">
-              {type === "position" ? "Appointments" : "Education"}
-            </h3>
-            <div className="timeline">
-              {data.academicJourney
-                .filter((j) => j.type === type)
-                .map((j) => (
-                  <article key={j.title}>
-                    <span className="eyebrow">{j.period}</span>
-                    <h3>{j.title}</h3>
-                    <p className="institution">{j.institution}</p>
-                    <p>{j.description}</p>
-                  </article>
-                ))}
+      <details className="section-details">
+        <summary>Appointments, education and teaching</summary>
+        <div className="expanded-content">
+          <div className="journey-grid">
+            {["position", "education"].map((type) => (
+              <div key={type}>
+                <h3 className="column-title">
+                  {type === "position" ? "Appointments" : "Education"}
+                </h3>
+                <div className="timeline">
+                  {data.academicJourney
+                    .filter((j) => j.type === type)
+                    .map((j) => (
+                      <article key={j.title}>
+                        <span className="eyebrow">{j.period}</span>
+                        <h3>{j.title}</h3>
+                        <p className="institution">{j.institution}</p>
+                        <p>{j.description}</p>
+                      </article>
+                    ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div id="teaching" className="teaching-panel">
+            <BookOpen size={25} />
+            <div>
+              <h3>Teaching & academic service</h3>
+              <p>{data.teaching.philosophy}</p>
+              <p>
+                <strong>Documented courses:</strong>{" "}
+                {data.teaching.courses.join(" · ")}
+              </p>
+              <p>
+                <strong>Current programmes:</strong>{" "}
+                {data.teaching.programmes.join(" · ")}
+              </p>
+              <p>{data.teaching.leadership}</p>
+              <p>Peer reviewer for IEEE, Elsevier and Springer journals.</p>
             </div>
           </div>
-        ))}
-      </div>
-      <div id="teaching" className="teaching-panel">
-        <BookOpen size={25} />
-        <div>
-          <h3>Teaching & academic service</h3>
-          <p>{data.teaching.philosophy}</p>
-          <p>
-            <strong>Documented courses:</strong>{" "}
-            {data.teaching.courses.join(" · ")}
-          </p>
-          <p>
-            <strong>Current programmes:</strong>{" "}
-            {data.teaching.programmes.join(" · ")}
-          </p>
-          <p>{data.teaching.leadership}</p>
-          <p>
-            PEC {data.personal.pec} · Web of Science researcher ID{" "}
-            {data.personal.wos} · Peer reviewer for IEEE, Elsevier and Springer
-            journals.
-          </p>
         </div>
-      </div>
+      </details>
     </section>
   );
 }
@@ -673,29 +692,35 @@ function Recognition() {
             research programmes to European proposal evaluation.
           </p>
         </SectionHeading>
-        <div className="recognition-grid">
-          {data.awards.map((a) => (
-            <article
-              className={`recognition-card ${a.type === "Award" ? "award-feature" : ""}`}
-              key={a.title}
-            >
+        <details className="section-details">
+          <summary>Awards, research support and patent</summary>
+          <div className="expanded-content">
+            <div className="recognition-grid">
+              {data.awards.map((a) => (
+                <article
+                  className={`recognition-card ${a.type === "Award" ? "award-feature" : ""}`}
+                  key={a.title}
+                >
+                  <span className="eyebrow">
+                    {a.year} · {a.type}
+                  </span>
+                  <h3>{a.title}</h3>
+                  {a.amount && (
+                    <strong className="grant-amount">{a.amount}</strong>
+                  )}
+                  <p>{a.description}</p>
+                </article>
+              ))}
+            </div>
+            <article className="patent-panel">
               <span className="eyebrow">
-                {a.year} · {a.type}
+                PATENT APPLICATION · {data.patent.status}
               </span>
-              <h3>{a.title}</h3>
-              {a.amount && <strong className="grant-amount">{a.amount}</strong>}
-              <p>{a.description}</p>
+              <h3>{data.patent.title}</h3>
+              <p>{data.patent.description}</p>
             </article>
-          ))}
-        </div>
-        <article className="patent-panel">
-          <span className="eyebrow">
-            PATENT APPLICATION · {data.patent.status}
-          </span>
-          <h3>{data.patent.title}</h3>
-          <p>{data.patent.description}</p>
-          <p className="muted small">Inventors: {data.patent.authors}</p>
-        </article>
+          </div>
+        </details>
       </div>
     </section>
   );
@@ -714,34 +739,39 @@ function Skills() {
           evolving focus on compilers and custom acceleration.
         </p>
       </SectionHeading>
-      <div className="skills-grid">
-        {data.skills.map((s) => (
-          <article key={s.title}>
-            <span
-              className={`eyebrow ${s.level !== "Practice" ? "emerging" : ""}`}
-            >
-              {s.level}
-            </span>
-            <h3>{s.title}</h3>
-            <div className="tags">
-              {s.items.map((item) => (
-                <span key={item}>{item}</span>
+      <details className="section-details">
+        <summary>Skills and research collaborations</summary>
+        <div className="expanded-content">
+          <div className="skills-grid">
+            {data.skills.map((s) => (
+              <article key={s.title}>
+                <span
+                  className={`eyebrow ${s.level !== "Practice" ? "emerging" : ""}`}
+                >
+                  {s.level}
+                </span>
+                <h3>{s.title}</h3>
+                <div className="tags">
+                  {s.items.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="collaborations">
+            <h3>International research collaborations</h3>
+            <div>
+              {data.collaborations.map((c) => (
+                <p key={c.institution}>
+                  <strong>{c.institution}</strong>
+                  <span>{c.country}</span>
+                </p>
               ))}
             </div>
-          </article>
-        ))}
-      </div>
-      <div className="collaborations">
-        <h3>International research collaborations</h3>
-        <div>
-          {data.collaborations.map((c) => (
-            <p key={c.institution}>
-              <strong>{c.institution}</strong>
-              <span>{c.country}</span>
-            </p>
-          ))}
+          </div>
         </div>
-      </div>
+      </details>
     </section>
   );
 }
@@ -760,8 +790,8 @@ function Contact() {
           Research collaborations, postgraduate research and applied AI
           partnerships.
         </p>
-        <a className="contact-email" href={`mailto:${data.personal.email}`}>
-          {data.personal.email} <ArrowUpRight size={24} />
+        <a className="contact-email" href={data.personal.googleScholar}>
+          Research profile <ArrowUpRight size={24} />
         </a>
         <div className="contact-links">
           <a href={data.personal.googleScholar} {...external}>
@@ -777,7 +807,7 @@ function Contact() {
         <p className="contact-address">
           {data.personal.department}
           <br />
-          {data.personal.college} · {data.personal.institution}
+          {data.personal.institution}
           <br />
           {data.personal.location}
         </p>

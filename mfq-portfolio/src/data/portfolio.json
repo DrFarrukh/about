@@ -3,14 +3,10 @@
     "name": "Dr. Muhammad Farrukh Qureshi",
     "title": "Associate Professor & Head of AI/ML Research Cluster",
     "department": "Department of Electronic and Power Engineering (EPE)",
-    "college": "Pakistan Navy Engineering College (PNEC)",
     "institution": "National University of Sciences and Technology (NUST)",
     "location": "Karachi, Pakistan",
-    "email": "mfarrukh@pnec.nust.edu.pk",
     "googleScholar": "https://scholar.google.com/citations?user=yFCfrCUAAAAJ&hl=en",
     "github": "https://github.com/DrFarrukh",
-    "wos": "HJH-8003-2023",
-    "pec": "ELECTRO-16864",
     "researchStatement": "Connecting physiological sensing, signal intelligence and hardware-aware AI to build reliable systems that work beyond the lab.",
     "bio": "I develop machine-learning and signal-processing methods for physiological and wearable sensor data, with experience in surface EMG, EEG, phonocardiography and real-world sensing. My current research connects robust representations, efficient models and embedded deployment for biomedical, cyber-physical and robotic applications."
   },
@@ -34,17 +30,6 @@
       "doi": "10.1038/s41598-026-66953-9",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "Z Zia",
-        "F Amin",
-        "MF Qureshi",
-        "M Fatima",
-        "JSU Rahman",
-        "AH Mashal",
-        "ZY Hamd",
-        "..."
-      ],
-      "authorsTruncated": true,
       "scholarVenue": "Scientific Reports",
       "citations": null,
       "citationsCombined": false,
@@ -63,8 +48,6 @@
       "doi": "10.1016/j.array.2026.100913",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": ["SS Sani", "S Khalid", "MF Qureshi", "N Saeed", "MU Rehman"],
-      "authorsTruncated": false,
       "scholarVenue": "Array, 100913",
       "citations": null,
       "citationsCombined": false
@@ -79,8 +62,6 @@
       "doi": "10.1016/j.aquaeng.2026.102752",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": ["U Iqbal", "D Li", "MF Qureshi", "Z Mushtaq", "HAU Rehman"],
-      "authorsTruncated": false,
       "scholarVenue": "Aquacultural Engineering, 102752",
       "citations": null,
       "citationsCombined": false
@@ -95,15 +76,6 @@
       "doi": "10.32604/cmes.2025.071571",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "A Yaqub",
-        "MS Orakzai",
-        "MF Qureshi",
-        "Z Mushtaq",
-        "I Siddique",
-        "T Radwan"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "CMES-Computer Modeling in Engineering and Sciences 145 (2), 2503-2533",
       "citations": 4,
       "citationsCombined": false
@@ -118,15 +90,6 @@
       "doi": "10.1109/ACCESS.2026.3651906",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "ST Zahra",
-        "SK Imdad",
-        "S Arif",
-        "MF Qureshi",
-        "H Altammar",
-        "A Ahmad"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "IEEE Access 14, 7185-7203",
       "citations": 6,
       "citationsCombined": false
@@ -141,15 +104,6 @@
       "doi": "10.1109/ACCESS.2025.3624309",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "EA Shah",
-        "SJ Ahsan",
-        "MF Qureshi",
-        "S Khalid",
-        "R Ullah",
-        "MU Rehman"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "IEEE Access",
       "citations": 6,
       "citationsCombined": false
@@ -164,8 +118,6 @@
       "doi": "10.1016/j.aquaeng.2025.102604",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": ["U Iqbal", "D Li", "MF Qureshi", "Z Mushtaq", "HA ur Rehman"],
-      "authorsTruncated": false,
       "scholarVenue": "Aquacultural Engineering, 102604",
       "citations": 13,
       "citationsCombined": false
@@ -180,17 +132,6 @@
       "doi": "10.3389/fncom.2025.1506869",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "HA Siddiqa",
-        "MF Qureshi",
-        "A Khurshid",
-        "Y Xu",
-        "L Wang",
-        "SF Abbasi",
-        "C Chen",
-        "..."
-      ],
-      "authorsTruncated": true,
       "scholarVenue": "Frontiers in Computational Neuroscience 19, 1506869",
       "citations": 11,
       "citationsCombined": false
@@ -205,15 +146,6 @@
       "doi": "10.3934/mbe.2024252",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "HGM Qamar",
-        "MF Qureshi",
-        "Z Mushtaq",
-        "Z Zubariah",
-        "MZU Rehman",
-        "..."
-      ],
-      "authorsTruncated": true,
       "scholarVenue": "Math. Biosci. Eng 21 (4), 5712-5734",
       "citations": 13,
       "citationsCombined": false
@@ -228,8 +160,6 @@
       "doi": "10.1007/s11042-024-20395-5",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": ["AM Muhammad", "MZ ur Rehman", "Z Mushtaq", "MF Qureshi"],
-      "authorsTruncated": false,
       "scholarVenue": "Multimedia Tools and Applications 84 (19), 21721-21746",
       "citations": 6,
       "citationsCombined": false
@@ -244,16 +174,6 @@
       "doi": "10.3390/ani14111690",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "U Iqbal",
-        "D Li",
-        "Z Du",
-        "M Akhter",
-        "Z Mushtaq",
-        "MF Qureshi",
-        "HAU Rehman"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "Animals 14 (11), 1690",
       "citations": 21,
       "citationsCombined": false
@@ -268,16 +188,6 @@
       "doi": "10.32604/cmc.2024.047621",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "MA Latif",
-        "Z Mushtaq",
-        "S Arif",
-        "S Rehman",
-        "MF Qureshi",
-        "NA Samee",
-        "..."
-      ],
-      "authorsTruncated": true,
       "scholarVenue": "Computers, Materials & Continua 78 (3), 4225-4241",
       "citations": 17,
       "citationsCombined": true
@@ -292,15 +202,6 @@
       "doi": "10.1109/ICECT61618.2024.10581350",
       "status": "Published",
       "contribution": "First author",
-      "authors": [
-        "MF Qureshi",
-        "F Amin",
-        "Z Mushtaq",
-        "M Ali",
-        "AA Haris",
-        "AY Rana"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "2024 International Conference on Engineering & Computing Technologies (ICECT …",
       "citations": 10,
       "citationsCombined": false
@@ -315,15 +216,6 @@
       "doi": "10.1109/ICECT61618.2024.10581172",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "MQ Shahid",
-        "F Amin",
-        "AA Haris",
-        "H Al Faisal",
-        "A Imran",
-        "MF Qureshi"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "2024 International Conference on Engineering & Computing Technologies (ICECT …",
       "citations": 7,
       "citationsCombined": false
@@ -338,16 +230,6 @@
       "doi": "10.1109/ACCESS.2023.3303204",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "Q Akhter",
-        "A Siddique",
-        "SA Alqahtani",
-        "A Mahmood",
-        "M Alam",
-        "Z Mushtaq",
-        "..."
-      ],
-      "authorsTruncated": true,
       "scholarVenue": "IEEE Access 11, 85716-85727",
       "citations": 28,
       "citationsCombined": false
@@ -362,16 +244,6 @@
       "doi": "10.3390/healthcare11101493",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "A Shahzad",
-        "A Mushtaq",
-        "AQ Sabeeh",
-        "YY Ghadi",
-        "Z Mushtaq",
-        "S Arif",
-        "..."
-      ],
-      "authorsTruncated": true,
       "scholarVenue": "Healthcare 11 (10), 1493",
       "citations": 52,
       "citationsCombined": false
@@ -386,16 +258,6 @@
       "doi": "10.3390/app13074255",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "S Khalil",
-        "U Nawaz",
-        "Zubariah",
-        "Z Mushtaq",
-        "S Arif",
-        "MZ ur Rehman",
-        "..."
-      ],
-      "authorsTruncated": true,
       "scholarVenue": "Applied Sciences 13 (7), 4255",
       "citations": 38,
       "citationsCombined": false
@@ -410,8 +272,6 @@
       "doi": "10.1109/JSEN.2023.3255408",
       "status": "Published",
       "contribution": "First author",
-      "authors": ["MF Qureshi", "Z Mushtaq", "MZU Rehman", "EN Kamavuako"],
-      "authorsTruncated": false,
       "scholarVenue": "IEEE Sensors Journal 23 (8), 8989-8996",
       "citations": 65,
       "citationsCombined": false
@@ -426,8 +286,6 @@
       "doi": "10.1049/ell2.12706",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": ["Z Mushtaq", "MF Qureshi", "MJ Abbass", "SMQ Al‐Fakih"],
-      "authorsTruncated": false,
       "scholarVenue": "Electronics Letters 59 (2), e212706",
       "citations": 26,
       "citationsCombined": false
@@ -442,15 +300,6 @@
       "doi": "10.3934/math.20231238",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "N Afshan",
-        "Z Mushtaq",
-        "FS Alamri",
-        "MF Qureshi",
-        "NA Khan",
-        "I Siddique"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "Aims Mathematics 8 (10), 24274-24309",
       "citations": 19,
       "citationsCombined": false
@@ -465,15 +314,6 @@
       "doi": "10.1109/ETECTE59617.2023.10396676",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "AA Khan",
-        "S Raza",
-        "MF Qureshi",
-        "Z Mushtaq",
-        "M Taha",
-        "F Amin"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "2023 2nd International Conference on Emerging Trends in Electrical, Control …",
       "citations": 10,
       "citationsCombined": false
@@ -488,8 +328,6 @@
       "doi": "10.1109/ETECTE59617.2023.10396663",
       "status": "Published",
       "contribution": "First author",
-      "authors": ["MF Qureshi", "Z Mushtaq", "MZU Rehman", "F Amin"],
-      "authorsTruncated": false,
       "scholarVenue": "2023 2nd International Conference on Emerging Trends in Electrical, Control …",
       "citations": 1,
       "citationsCombined": false
@@ -504,8 +342,6 @@
       "doi": "10.1109/JSEN.2022.3204121",
       "status": "Published",
       "contribution": "First author",
-      "authors": ["MF Qureshi", "Z Mushtaq", "MZ ur Rehman", "EN Kamavuako"],
-      "authorsTruncated": false,
       "scholarVenue": "IEEE Sensors Journal 22 (21), 20676-20683",
       "citations": 53,
       "citationsCombined": true
@@ -520,15 +356,6 @@
       "doi": "10.1109/ETECTE55893.2022.10007103",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "M Akmal",
-        "S Khalid",
-        "M Moiz",
-        "MJ Abbass",
-        "MF Qureshi",
-        "Z Mushtaq"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "2022 International conference on emerging trends in electrical, control, and …",
       "citations": 7,
       "citationsCombined": false
@@ -543,8 +370,6 @@
       "doi": "10.1109/IBCAST54850.2022.9990172",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": ["Z Mushtaq", "MF Qureshi", "A Zohaib", "M Akmal"],
-      "authorsTruncated": false,
       "scholarVenue": "2022 19th International Bhurban Conference on Applied Sciences and …",
       "citations": 2,
       "citationsCombined": false
@@ -559,8 +384,6 @@
       "doi": "10.1109/BIBE52308.2021.9635461",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": ["M Akmal", "MF Qureshi", "F Amin", "MZU Rehman", "IK Niazi"],
-      "authorsTruncated": false,
       "scholarVenue": "2021 IEEE 21st international conference on bioinformatics and bioengineering …",
       "citations": 21,
       "citationsCombined": false
@@ -575,15 +398,6 @@
       "doi": "10.1109/JSEN.2019.2935087",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": [
-        "U Zabit",
-        "OD Bernal",
-        "S Amin",
-        "MF Qureshi",
-        "AH Khawaja",
-        "T Bosch"
-      ],
-      "authorsTruncated": false,
       "scholarVenue": "IEEE Sens. J. 19 (23), 11151-11158",
       "citations": 54,
       "citationsCombined": false
@@ -598,8 +412,6 @@
       "doi": "10.1109/ICICT47744.2019.9001985",
       "status": "Published",
       "contribution": "Co-author",
-      "authors": ["S Inam", "MF Qureshi", "F Amin", "M Akmal", "MZ Rehman"],
-      "authorsTruncated": false,
       "scholarVenue": "2019 8th International Conference on Information and Communication …",
       "citations": 18,
       "citationsCombined": false
@@ -607,209 +419,171 @@
   ],
   "projects": [
     {
-      "name": "Muhammad Zulqarnain",
-      "registration": "537460",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Adaptive Context Management for Local Coding Agents",
       "role": "Supervisor / Advisor",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-01"
     },
     {
-      "name": "Khurram Sami",
-      "registration": "536883",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Deep Learning Framework for Earthquake Detection Using VLF Radio Signals",
       "role": "Supervisor / Advisor",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-02"
     },
     {
-      "name": "Afham Ahmed",
-      "registration": "538758",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Design of Neuro Symbolic and Probabilistic Model for Reliable Equation Discovery",
       "role": "Supervisor / Advisor",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-03"
     },
     {
-      "name": "Sheraz Siddiqui",
-      "registration": "578200",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Multimodal AI for Communication Intent Recognition",
       "role": "Supervisor / Advisor",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-04"
     },
     {
-      "name": "Muhammad Adil",
-      "registration": "538512",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Nano-Recursive VLM for High Altitude UAV Surveillance",
       "role": "Supervisor / Advisor",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-05"
     },
     {
-      "name": "Muhammad Farhan",
-      "registration": "539906",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Selective Verification of AI Agent Completion Claims in Clinical Records",
       "role": "Supervisor / Advisor",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-06"
     },
     {
-      "name": "Sadia Amin",
-      "registration": "538646",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Self-Supervised Adaptation of Time-Series Foundation Models for Air Quality Forecasting",
       "role": "Supervisor / Advisor",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-07"
     },
     {
-      "name": "M Umer",
-      "registration": "578199",
-      "batch": "PNEC/MSAI/2025F",
       "title": "UAV Telemetry Anomaly Diagnosis with Sensor-Group Intervention",
       "role": "Supervisor / Advisor",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-08"
     },
     {
-      "name": "Syed Mubashir Shah",
-      "registration": "534130",
-      "batch": "PNEC/MSEE/2024F",
-      "title": "A Deep Learning based Framework for Infrared Small Object Segmentation in Naval Defense Systems",
+      "title": "Deep Learning for Infrared Small-Object Segmentation in Maritime Imaging",
       "role": "GEC Member",
-      "status": "Active",
-      "degree": "MS"
+      "status": "Completed",
+      "degree": "MS",
+      "id": "project-09"
     },
     {
-      "name": "Khulood Erfan",
-      "registration": "538013",
-      "batch": "PNEC/MSAI/2025F",
       "title": "A Unified Evaluation Protocol for LLM Debiasing: Comparing Contrastive, Steering, and Preference-Based Methods Under Format Sensitivity",
       "role": "GEC Member",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-10"
     },
     {
-      "name": "Fiza Karim Palijo",
-      "registration": "494768",
-      "batch": "PNEC/MSAI/2024F",
       "title": "Benchmarking Vision Transformer Variants Against CNNs for Multi-Label Photovoltaic Fault Detection and Cross-Domain Adaptation",
       "role": "GEC Member",
-      "status": "Active",
-      "degree": "MS"
+      "status": "Completed",
+      "degree": "MS",
+      "id": "project-11"
     },
     {
-      "name": "Khizra Arshad",
-      "registration": "536750",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Deep Learning Frameworks for High-Resolution RF Measurement and Spectrum Fault Diagnosis via LLM-Driven RF Tokenization",
       "role": "GEC Member",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-12"
     },
     {
-      "name": "Rehan Ali Syed",
-      "registration": "578192",
-      "batch": "PNEC/MSDS/2025F",
       "title": "Design of Dynamic Temporal Grounding Mechanism for Gloss-Free Sign Language Translation",
       "role": "GEC Member",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-13"
     },
     {
-      "name": "Usman Aslam",
-      "registration": "578193",
-      "batch": "PNEC/MSDS/2025F",
       "title": "Generative AI-Based Adaptive Filter Synthesis for Micro-Doppler Enhancement And Clutter Suppression",
       "role": "GEC Member",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-14"
     },
     {
-      "name": "Muhammad Hanzalah",
-      "registration": "537986",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Hardware-Accelerated Neuro-Symbolic Predictive Control for Vision-Guided Autonomous UAVs",
       "role": "GEC Member",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-15"
     },
     {
-      "name": "Amna Nadeem",
-      "registration": "538055",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Mitigating Shared-Misreading Failures in LLM-Generated Code through Role-Separated Test Authorship",
       "role": "GEC Member",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-16"
     },
     {
-      "name": "Abdul Hadi Bhatti Rajput",
-      "registration": "537990",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Neuro-symbolic and compositional framework for Lexical and semantic aware adaptive tokenization",
       "role": "GEC Member",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-17"
     },
     {
-      "name": "Mehwish Nadeem",
-      "registration": "537667",
-      "batch": "PNEC/MSAI/2025F",
       "title": "Physics Informed Deep Generative Framework for Ship Hull Form Design",
       "role": "GEC Member",
       "status": "Active",
-      "degree": "MS"
+      "degree": "MS",
+      "id": "project-18"
     },
     {
-      "name": "Muhammad Adeel",
-      "registration": "491868",
-      "batch": "PNEC/PHDEE/2024S",
       "title": "Physics Informed Evaluation of Large Language Models for Autonomous Systems",
       "role": "GEC Member",
       "status": "Active",
-      "degree": "PhD"
+      "degree": "PhD",
+      "id": "project-19"
     }
   ],
   "phdSupervisions": [
     {
-      "name": "Rabail Khowaja",
       "topic": "AI-enabled rehabilitation and neural engineering (prospective research direction)",
-      "institution": "NUST, PNEC",
       "degree": "PhD EE",
       "role": "Lead Supervisor",
-      "status": "In progress"
+      "status": "Early-stage research",
+      "id": "phd-01",
+      "label": "Biomedical sensing and rehabilitation"
     },
     {
-      "name": "Akbare Yaqub",
       "topic": "Deep Learning-based Classification of Cardiac Pathologies using Phonocardiogram Analysis",
-      "institution": "Riphah International University",
       "degree": "PhD EE",
       "role": "Co-Supervisor",
-      "status": "In progress"
+      "status": "Thesis evaluation / preparing for defence",
+      "id": "phd-02",
+      "label": "Cardiac pathology classification"
     },
     {
-      "name": "Shaima Sani",
       "topic": "Deep learning based Distinct Material Classification by Sound Signals",
-      "institution": "Riphah International University",
       "degree": "PhD EE",
       "role": "Co-Supervisor",
-      "status": "In progress"
+      "status": "Ongoing research",
+      "id": "phd-03",
+      "label": "Acoustic material classification"
     },
     {
-      "name": "Abdul Malik Muhammad",
       "topic": "Cross-Species Computational Dermatology: Multi-Scale Hybrid Architectures for Automated Pathology Characterization and Severity Grading in Biomedical Imaging",
-      "institution": "Riphah International University",
       "degree": "PhD BME",
       "role": "Co-Supervisor",
-      "status": "In progress"
+      "status": "Thesis evaluation / preparing for defence",
+      "id": "phd-04",
+      "label": "Biomedical imaging and pathology grading"
     }
   ],
   "researchAreas": [
@@ -847,8 +621,8 @@
     {
       "period": "Feb 2026 – Present",
       "title": "Associate Professor & Head of AI/ML Research Cluster",
-      "institution": "NUST · PNEC, Karachi",
-      "description": "Lead the AI/ML research stream within EPE; teach MS AI, MS Data Science, MS EE and BS EE cohorts; contribute to faculty hiring and the AI implementation roadmap for naval training.",
+      "institution": "National University of Sciences and Technology (NUST), Karachi",
+      "description": "Lead the AI/ML research stream within EPE; teach postgraduate and undergraduate programmes; contribute to faculty hiring and curriculum development.",
       "type": "position"
     },
     {
@@ -933,7 +707,6 @@
   "patent": {
     "title": "Digital Fuel Flow Sensor",
     "status": "Application submitted to IPO-Pakistan; Stage 1 cleared",
-    "authors": "Qureshi, M.F.; Khalid, S.; Javaid, M.H.B.; Nadeem, M.S.; Khan, H.M.",
     "description": "A magnetic rotor and Hall-effect sensor measure fuel intake; an ESP32 sends measurements through MQTT to a dashboard for transparent refuelling and fleet monitoring."
   },
   "collaborations": [
@@ -1065,7 +838,7 @@
   ],
   "contentSources": {
     "publications": "User-supplied Google Scholar text and 2026 CV; EEG co-design publication status, date and permanent DOI updated from user-supplied Scientific Reports publisher text.",
-    "projects": "User-confirmed current project list; supersedes CV MS supervision records.",
-    "profile": "Uploaded CVs and resumes, with institutional email from the resumes."
+    "projects": "Anonymous public research summaries with user-confirmed responsibilities and completion status; personal student records and cohort identifiers are excluded.",
+    "profile": "Public academic profile derived from the supplied CVs; private contact details, identifiers and restricted affiliation references are omitted."
   }
 }

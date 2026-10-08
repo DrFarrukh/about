@@ -5,70 +5,60 @@ const data = JSON.parse(
   readFileSync(new URL("../src/data/portfolio.json", import.meta.url), "utf8"),
 );
 
-test("current supervision has exactly the eight user-confirmed MS researchers", () => {
-  const actual = data.projects.filter((p) => p.role === "Supervisor / Advisor");
+test("supervision separates eight MS projects from eleven committee projects", () => {
+  const supervised = data.projects.filter(
+    (p) => p.role === "Supervisor / Advisor",
+  );
+  const committee = data.projects.filter((p) => p.role === "GEC Member");
+  assert.equal(supervised.length, 8);
+  assert.ok(
+    supervised.every((p) => p.degree === "MS" && p.status === "Active"),
+  );
+  assert.equal(committee.length, 11);
+  assert.equal(new Set(data.projects.map((p) => p.title)).size, 19);
+  assert.equal(new Set(data.projects.map((p) => p.id)).size, 19);
+  assert.equal(committee.filter((p) => p.degree === "PhD").length, 1);
   assert.deepEqual(
-    actual.map((p) => [p.name, p.registration]),
+    committee.filter((p) => p.status === "Completed").map((p) => p.title),
     [
-      ["Muhammad Zulqarnain", "537460"],
-      ["Khurram Sami", "536883"],
-      ["Afham Ahmed", "538758"],
-      ["Sheraz Siddiqui", "578200"],
-      ["Muhammad Adil", "538512"],
-      ["Muhammad Farhan", "539906"],
-      ["Sadia Amin", "538646"],
-      ["M Umer", "578199"],
+      "Deep Learning for Infrared Small-Object Segmentation in Maritime Imaging",
+      "Benchmarking Vision Transformer Variants Against CNNs for Multi-Label Photovoltaic Fault Detection and Cross-Domain Adaptation",
     ],
   );
-  assert.ok(
-    actual.every(
-      (p) =>
-        p.degree === "MS" &&
-        p.batch === "PNEC/MSAI/2025F" &&
-        p.status === "Active",
-    ),
-  );
-  assert.equal(
-    actual[0].title,
-    "Adaptive Context Management for Local Coding Agents",
-  );
-  assert.equal(
-    actual[7].title,
-    "UAV Telemetry Anomaly Diagnosis with Sensor-Group Intervention",
+  assert.equal(committee.filter((p) => p.status === "Active").length, 9);
+});
+
+test("anonymous PhD research stages follow the supplied corrections", () => {
+  assert.equal(data.phdSupervisions.length, 4);
+  assert.deepEqual(
+    data.phdSupervisions.map((p) => p.status),
+    [
+      "Early-stage research",
+      "Thesis evaluation / preparing for defence",
+      "Ongoing research",
+      "Thesis evaluation / preparing for defence",
+    ],
   );
 });
 
-test("committee projects are distinct from supervision and duplicate entries are removed", () => {
-  const actual = data.projects.filter((p) => p.role === "GEC Member");
-  assert.deepEqual(
-    actual.map((p) => p.name),
-    [
-      "Syed Mubashir Shah",
-      "Khulood Erfan",
-      "Fiza Karim Palijo",
-      "Khizra Arshad",
-      "Rehan Ali Syed",
-      "Usman Aslam",
-      "Muhammad Hanzalah",
-      "Amna Nadeem",
-      "Abdul Hadi Bhatti Rajput",
-      "Mehwish Nadeem",
-      "Muhammad Adeel",
-    ],
+test("public data excludes student identifiers and private contact fields", () => {
+  for (const p of [...data.projects, ...data.phdSupervisions]) {
+    for (const key of ["name", "registration", "batch", "institution"]) {
+      assert.ok(!Object.hasOwn(p, key), `Public project must omit ${key}`);
+    }
+  }
+  for (const key of ["email", "college", "pec", "wos"]) {
+    assert.ok(
+      !Object.hasOwn(data.personal, key),
+      `Public profile must omit ${key}`,
+    );
+  }
+  assert.ok(!Object.hasOwn(data.patent, "authors"));
+  assert.ok(data.publications.every((p) => !Object.hasOwn(p, "authors")));
+  assert.doesNotMatch(
+    JSON.stringify(data),
+    /\b(?:PNEC|naval|navy|military|defense|defence systems)\b/i,
   );
-  assert.equal(new Set(data.projects.map((p) => p.registration)).size, 19);
-  assert.equal(actual.find((p) => p.name === "Muhammad Adeel").degree, "PhD");
-  assert.ok(
-    !data.phdSupervisions.some((p) => /Adeel|Ahsan.*Baig/i.test(p.name)),
-  );
-});
-
-test("PhD supervision excludes the person who has not started the programme", () => {
-  assert.deepEqual(
-    data.phdSupervisions.map((p) => p.name),
-    ["Rabail Khowaja", "Akbare Yaqub", "Shaima Sani", "Abdul Malik Muhammad"],
-  );
-  assert.doesNotMatch(JSON.stringify(data), /Ahsan Baig/);
 });
 
 test("Scholar snapshot metrics and publication corrections are preserved", () => {
@@ -85,7 +75,6 @@ test("Scholar snapshot metrics and publication corrections are preserved", () =>
     (p) => p.doi === "10.1109/JSEN.2023.3255408",
   );
   assert.equal(emg.citations, 65);
-  assert.equal(emg.authors[0], "MF Qureshi");
   assert.equal(
     data.publications.find((p) => p.doi === "10.1007/s11042-024-20395-5").year,
     2025,
@@ -117,8 +106,7 @@ test("Scholar snapshot metrics and publication corrections are preserved", () =>
   );
 });
 
-test("appointments, education and institutional contact match the supplied CVs", () => {
-  assert.equal(data.personal.email, "mfarrukh@pnec.nust.edu.pk");
+test("appointments, education and public profiles match the supplied CVs", () => {
   assert.match(data.personal.googleScholar, /user=yFCfrCUAAAAJ/);
   assert.equal(data.personal.github, "https://github.com/DrFarrukh");
   assert.equal(data.academicJourney[0].period, "Feb 2026 – Present");

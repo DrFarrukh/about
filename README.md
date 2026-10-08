@@ -24,14 +24,14 @@ The portfolio and on-screen academic CV follow the operating system’s light/da
 
 ## Content provenance
 
-- The eight uploaded CV/resume documents supply appointments, education, technical skills, grants, patent status, and collaboration institutions. The resumes supply the institutional email and GitHub link.
-- The Google Scholar text supplied on 8 October 2026 supplies the 28 publication titles, author previews, years, citation counts, and aggregate metrics: **508 citations, h-index 13, i10-index 17**. Missing counts stay unknown, and truncated author lists retain their ellipses. Scholar’s starred counts are preserved. The bovine-image paper uses Scholar’s 2025 publication year.
+- The eight uploaded CV/resume documents supply appointments, education, technical skills, grants, patent status, and collaboration institutions. The public contact links are Google Scholar and GitHub.
+- The Google Scholar text supplied on 8 October 2026 supplies the 28 publication titles, years, citation counts, and aggregate metrics: **508 citations, h-index 13, i10-index 17**. Missing counts stay unknown; full bibliographic author lists are available through publisher links. Scholar’s starred counts are preserved. The bovine-image paper uses Scholar’s 2025 publication year.
 - The 2026 CV supplies 27 DOI links. The EEG hardware/software co-design paper was subsequently confirmed by the user-supplied Scientific Reports publisher text as **published on 23 September 2026**, with permanent DOI **10.1038/s41598-026-66953-9**. The publisher describes it as an early, citable version that will be replaced by the final Version of Record. All 28 records are now published: 20 journal articles and eight conference papers, each with a DOI. The reported 83 accesses are not a citation count; unknown citations remain null.
-- The user-confirmed current project list supersedes the CV’s MS supervision list. It contains eight MS supervisor/advisor projects and eleven unique GEC projects. Khulood Erfan’s duplicate was removed. Muhammad Adeel’s PhD project is committee service, not PhD supervision.
-- The four named PhD supervision records come from the CV, with Mirza Ahsan Baig excluded as explicitly requested. Historical CV MS entries are not displayed as current students.
+- Public project data contains anonymous research topics, roles and status only: eight MS supervision/advisory projects and eleven unique committee projects (nine active, two completed). Student identities, registration numbers and cohort/batch codes are excluded.
+- Four anonymous PhD research directions are shown: one early-stage, two at thesis evaluation / preparing for defence, and one ongoing.
 - Compiler, FPGA and RISC-V expertise is described as developing. The patent is an application, not a granted patent. Unsupported paper titles, awards, links, achievements, course codes, and student names were removed.
 
-The public CV is generated from this corrected content, rather than publishing an older attachment containing superseded supervision records or referees’ contact details. Use **Print / save as PDF** on the CV page to export it. Metrics are a dated snapshot; the site does not scrape Scholar or automatically refresh citation counts.
+The public CV is generated from this anonymized content, rather than publishing an older attachment containing superseded supervision records or referees’ contact details. Use **Print / save as PDF** on the CV page to export it. Metrics are a dated snapshot; the site does not scrape Scholar or automatically refresh citation counts.
 
 ## GitHub Pages
 
@@ -40,3 +40,5 @@ The public CV is generated from this corrected content, rather than publishing a
 Deployment needs repository push permission, Actions enabled, and Pages enabled. Local validation does not prove a remote deployment succeeded: check the workflow result and the public site after deployment.
 
 For cloud tasks, use the existing isolated checkout; do not create a worktree unless requested. No backend service or app secret is needed.
+
+The interface uses collapsed, expandable sections to keep the initial page compact. Do not add student names, registration numbers, cohort/batch codes, private contact details or military-affiliation references to public content. Use civilian research summaries and anonymous stage/status information.
