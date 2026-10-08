@@ -91,18 +91,26 @@ test("Scholar snapshot metrics and publication corrections are preserved", () =>
     2025,
   );
   const accepted = data.publications.filter((p) => p.status === "Accepted");
-  assert.equal(accepted.length, 1);
-  assert.equal(accepted[0].doi, null);
-  assert.equal(accepted[0].citations, null);
+  assert.equal(accepted.length, 0);
+  const eeg = data.publications.find((p) => p.id === 1);
+  assert.equal(eeg.status, "Published");
+  assert.equal(eeg.doi, "10.1038/s41598-026-66953-9");
+  assert.equal(eeg.publishedDate, "2026-09-23");
+  assert.equal(eeg.publicationStage, "Early published version");
+  assert.equal(
+    eeg.publisherUrl,
+    "https://www.nature.com/articles/s41598-026-66953-9",
+  );
+  assert.equal(eeg.citations, null);
   assert.equal(
     data.publications.filter((p) => p.status === "Published").length,
-    27,
+    28,
   );
   assert.equal(
     data.publications.filter((p) => p.type === "conference").length,
     8,
   );
-  assert.equal(data.publications.filter((p) => p.doi).length, 27);
+  assert.equal(data.publications.filter((p) => p.doi).length, 28);
   assert.doesNotMatch(
     JSON.stringify(data),
     /YOUR_ID|YOUR_ORCID|XXXX|example\.com|Patent Granted/,

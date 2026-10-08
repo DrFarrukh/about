@@ -32,13 +32,13 @@ ${section("Selected undergraduate supervision", list(data.undergraduateProjects.
 ${section("International research collaborations", list(data.collaborations.map((c) => `${escape(c.institution)} — ${escape(c.country)}`)))}
 ${section(
   "Publications — 28 records",
-  `<p class="note">Titles, author previews, years and citation counts from the supplied Scholar snapshot; DOIs and acceptance status from the 2026 CV. Ellipses indicate incomplete author lists. * preserves Scholar’s combined-citation marker. The EEG co-design paper remains labelled accepted based on the CV.</p><ol>${[
+  `<p class="note">Titles, author previews, years and citation counts from the supplied Scholar snapshot; DOI details from the 2026 CV and publisher updates. Ellipses indicate incomplete author lists. * preserves Scholar’s combined-citation marker. The EEG co-design paper was published by Scientific Reports on 23 September 2026 as an early, citable version with a permanent DOI.</p><ol>${[
     ...data.publications,
   ]
     .sort((a, b) => b.year - a.year || a.id - b.id)
     .map(
       (p) =>
-        `<li class="record"><strong>${escape(p.title)}</strong>${para(p.authors.join(", "))}<p>${escape(p.scholarVenue)} · ${p.year} · ${escape(p.status)} · ${escape(p.contribution)}</p>${p.doi ? `<a href="https://doi.org/${escape(p.doi)}">doi:${escape(p.doi)}</a>` : "DOI not provided in CV"}${p.citations !== null ? ` · ${p.citations}${p.citationsCombined ? "*" : ""} citations` : ""}</li>`,
+        `<li class="record"><strong>${escape(p.title)}</strong>${para(p.authors.join(", "))}<p>${escape(p.scholarVenue)} · ${p.year} · ${escape(p.status)} · ${escape(p.contribution)}</p>${p.doi ? `<a href="https://doi.org/${escape(p.doi)}">doi:${escape(p.doi)}</a>` : "DOI not provided in CV"}${p.publishedDate ? para(`Published ${p.publishedDate} · ${p.publicationStage}`) : ""}${p.publisherUrl ? `<p><a href="${escape(p.publisherUrl)}">Publisher article</a></p>` : ""}${p.citations !== null ? ` · ${p.citations}${p.citationsCombined ? "*" : ""} citations` : ""}</li>`,
     )
     .join("")}</ol>`,
 )}

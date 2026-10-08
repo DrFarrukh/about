@@ -25,6 +25,14 @@ const nav = [
 ];
 const publicFile = (file) => `${import.meta.env.BASE_URL}${file}`;
 const published = data.publications.filter((p) => p.status === "Published");
+const accepted = data.publications.filter((p) => p.status === "Accepted");
+const publicationDate = (date) =>
+  new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${date}T00:00:00Z`));
 
 function SectionHeading({ number, eyebrow, title, children }) {
   return (
@@ -162,8 +170,8 @@ function Hero() {
         {[
           [published.length, "Published papers"],
           [
-            data.publications.filter((p) => p.status === "Accepted").length,
-            "Accepted paper",
+            published.filter((p) => p.type === "journal").length,
+            "Published journal articles",
           ],
           [data.metrics.citations, "Citations · Scholar snapshot"],
           [data.metrics.hIndex, "h-index · Scholar snapshot"],
@@ -264,7 +272,11 @@ function Publications() {
             {published.filter((p) => p.type === "journal").length} published
             journal articles,{" "}
             {published.filter((p) => p.type === "conference").length} conference
-            papers and 1 accepted journal paper in the supplied 2026 CV.
+            papers
+            {accepted.length > 0
+              ? ` and ${accepted.length} accepted journal papers`
+              : ""}
+            .
           </p>
           <a
             className="text-link"
@@ -308,8 +320,13 @@ function Publications() {
             <span className="sr-only">Publication status</span>
             <select value={status} onChange={(e) => setStatus(e.target.value)}>
               <option value="all">All statuses</option>
-              <option value="Published">Published</option>
-              <option value="Accepted">Accepted</option>
+              {[...new Set(data.publications.map((p) => p.status))].map(
+                (value) => (
+                  <option key={value} value={value}>
+                    {value}
+                  </option>
+                ),
+              )}
             </select>
           </label>
           <label>
@@ -341,11 +358,23 @@ function Publications() {
                   {p.scholarVenue}{" "}
                   <span className="muted">· {p.contribution}</span>
                 </p>
-                <p className="citation-count">
-                  {p.citations !== null
-                    ? `${p.citations}${p.citationsCombined ? "*" : ""} citations`
-                    : "Citation count not shown in supplied snapshot"}
-                </p>
+                {p.citations !== null && (
+                  <p className="citation-count">
+                    {p.citations}
+                    {p.citationsCombined ? "*" : ""} citations
+                  </p>
+                )}
+                {p.publishedDate && (
+                  <p>
+                    Published {publicationDate(p.publishedDate)} ·{" "}
+                    {p.publicationStage}
+                  </p>
+                )}
+                {p.publisherUrl && (
+                  <a className="text-link" href={p.publisherUrl} {...external}>
+                    Publisher article <ArrowUpRight size={13} />
+                  </a>
+                )}
                 {p.doi && (
                   <a
                     className="doi"
@@ -355,11 +384,7 @@ function Publications() {
                     {p.doi} <ArrowUpRight size={13} />
                   </a>
                 )}
-                {!p.doi && (
-                  <span className="muted small">
-                    Accepted for publication · DOI not provided in CV
-                  </span>
-                )}
+                {!p.doi && <span className="muted small">DOI not listed</span>}
               </div>
               {p.doi && (
                 <a
@@ -383,8 +408,10 @@ function Publications() {
           Titles, author previews, publication years and citations follow your
           Google Scholar snapshot (8 October 2026): {data.metrics.citations}{" "}
           citations, h-index {data.metrics.hIndex}, i10-index{" "}
-          {data.metrics.i10Index}. DOIs and acceptance status follow the 2026
-          CV. An asterisk preserves Scholar’s combined-citation marker; an
+          {data.metrics.i10Index}. DOI details follow the 2026 CV and publisher
+          updates. The EEG co-design article was published by Scientific Reports
+          on 23 September 2026 as an early, citable version with a permanent
+          DOI. An asterisk preserves Scholar’s combined-citation marker; an
           ellipsis indicates a truncated author list. See Scholar for live
           updates.
         </p>
