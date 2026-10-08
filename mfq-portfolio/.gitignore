@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Pages generated from src/data/portfolio.json
+/public/cv.html
+/public/research.html
+/public/publications.html
+/public/projects.html
+/public/contact.html
+/public/.nojekyll

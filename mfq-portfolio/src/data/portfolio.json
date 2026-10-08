@@ -1,0 +1,1067 @@
+{
+  "personal": {
+    "name": "Dr. Muhammad Farrukh Qureshi",
+    "title": "Associate Professor & Head of AI/ML Research Cluster",
+    "department": "Department of Electronic and Power Engineering (EPE)",
+    "college": "Pakistan Navy Engineering College (PNEC)",
+    "institution": "National University of Sciences and Technology (NUST)",
+    "location": "Karachi, Pakistan",
+    "email": "mfarrukh@pnec.nust.edu.pk",
+    "googleScholar": "https://scholar.google.com/citations?user=yFCfrCUAAAAJ&hl=en",
+    "github": "https://github.com/DrFarrukh",
+    "wos": "HJH-8003-2023",
+    "pec": "ELECTRO-16864",
+    "researchStatement": "Connecting physiological sensing, signal intelligence and hardware-aware AI to build reliable systems that work beyond the lab.",
+    "bio": "I develop machine-learning and signal-processing methods for physiological and wearable sensor data, with experience in surface EMG, EEG, phonocardiography and real-world sensing. My current research connects robust representations, efficient models and embedded deployment for biomedical, cyber-physical and robotic applications."
+  },
+  "metrics": {
+    "citations": 508,
+    "hIndex": 13,
+    "i10Index": 17,
+    "citationsSince2021": 498,
+    "hIndexSince2021": 13,
+    "i10IndexSince2021": 17,
+    "source": "User-supplied Google Scholar profile snapshot, 8 October 2026"
+  },
+  "publications": [
+    {
+      "id": 1,
+      "title": "A noise-aware hardware-software co-design framework for real-time EEG-based stress detection across heterogeneous embedded platforms",
+      "venue": "Scientific Reports",
+      "year": 2026,
+      "type": "journal",
+      "area": "Biomedical AI",
+      "doi": null,
+      "status": "Accepted",
+      "contribution": "Co-author",
+      "authors": [
+        "Z Zia",
+        "F Amin",
+        "MF Qureshi",
+        "M Fatima",
+        "JSU Rahman",
+        "AH Mashal",
+        "ZY Hamd",
+        "..."
+      ],
+      "authorsTruncated": true,
+      "scholarVenue": "Scientific Reports",
+      "citations": null,
+      "citationsCombined": false
+    },
+    {
+      "id": 2,
+      "title": "Deep learning-based material classification for waste management using acoustic spectrograms",
+      "venue": "Array",
+      "year": 2026,
+      "type": "journal",
+      "area": "Acoustic sensing",
+      "doi": "10.1016/j.array.2026.100913",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": ["SS Sani", "S Khalid", "MF Qureshi", "N Saeed", "MU Rehman"],
+      "authorsTruncated": false,
+      "scholarVenue": "Array, 100913",
+      "citations": null,
+      "citationsCombined": false
+    },
+    {
+      "id": 3,
+      "title": "RAFE-net: A robust attention-based fusion framework for classifying fish feeding behavior from sonar and acoustic data",
+      "venue": "Aquacultural Engineering",
+      "year": 2026,
+      "type": "journal",
+      "area": "Aquaculture AI",
+      "doi": "10.1016/j.aquaeng.2026.102752",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": ["U Iqbal", "D Li", "MF Qureshi", "Z Mushtaq", "HAU Rehman"],
+      "authorsTruncated": false,
+      "scholarVenue": "Aquacultural Engineering, 102752",
+      "citations": null,
+      "citationsCombined": false
+    },
+    {
+      "id": 4,
+      "title": "Spectrotemporal Deep Learning for Heart Sound Classification under Clinical Noise Conditions",
+      "venue": "CMES – Computer Modeling in Engineering & Sciences",
+      "year": 2025,
+      "type": "journal",
+      "area": "Biomedical AI",
+      "doi": "10.32604/cmes.2025.071571",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "A Yaqub",
+        "MS Orakzai",
+        "MF Qureshi",
+        "Z Mushtaq",
+        "I Siddique",
+        "T Radwan"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "CMES-Computer Modeling in Engineering and Sciences 145 (2), 2503-2533",
+      "citations": 4,
+      "citationsCombined": false
+    },
+    {
+      "id": 5,
+      "title": "Power transformer health index and life span prediction using supervised machine learning: a hybrid autoencoder enhanced gradient boosting approach",
+      "venue": "IEEE Access",
+      "year": 2026,
+      "type": "journal",
+      "area": "Power systems",
+      "doi": "10.1109/ACCESS.2026.3651906",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "ST Zahra",
+        "SK Imdad",
+        "S Arif",
+        "MF Qureshi",
+        "H Altammar",
+        "A Ahmad"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "IEEE Access 14, 7185-7203",
+      "citations": 6,
+      "citationsCombined": false
+    },
+    {
+      "id": 6,
+      "title": "Machine learning and multivariate analysis of depression prevalence and predictors in acute coronary syndrome",
+      "venue": "IEEE Access",
+      "year": 2025,
+      "type": "journal",
+      "area": "Clinical machine learning",
+      "doi": "10.1109/ACCESS.2025.3624309",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "EA Shah",
+        "SJ Ahsan",
+        "MF Qureshi",
+        "S Khalid",
+        "R Ullah",
+        "MU Rehman"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "IEEE Access",
+      "citations": 6,
+      "citationsCombined": false
+    },
+    {
+      "id": 7,
+      "title": "LightHybridNet-Transformer-FFIA: A hybrid Transformer based deep learning model for enhanced fish feeding intensity classification",
+      "venue": "Aquacultural Engineering",
+      "year": 2025,
+      "type": "journal",
+      "area": "Aquaculture AI",
+      "doi": "10.1016/j.aquaeng.2025.102604",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": ["U Iqbal", "D Li", "MF Qureshi", "Z Mushtaq", "HA ur Rehman"],
+      "authorsTruncated": false,
+      "scholarVenue": "Aquacultural Engineering, 102604",
+      "citations": 13,
+      "citationsCombined": false
+    },
+    {
+      "id": 8,
+      "title": "EEG electrode setup optimization using feature extraction techniques for neonatal sleep state classification",
+      "venue": "Frontiers in Computational Neuroscience",
+      "year": 2025,
+      "type": "journal",
+      "area": "Biomedical AI",
+      "doi": "10.3389/fncom.2025.1506869",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "HA Siddiqa",
+        "MF Qureshi",
+        "A Khurshid",
+        "Y Xu",
+        "L Wang",
+        "SF Abbasi",
+        "C Chen",
+        "..."
+      ],
+      "authorsTruncated": true,
+      "scholarVenue": "Frontiers in Computational Neuroscience 19, 1506869",
+      "citations": 11,
+      "citationsCombined": false
+    },
+    {
+      "id": 9,
+      "title": "EMG gesture signal analysis towards diagnosis of upper limb using dual-pathway convolutional neural network",
+      "venue": "Mathematical Biosciences and Engineering",
+      "year": 2024,
+      "type": "journal",
+      "area": "Biomedical AI",
+      "doi": "10.3934/mbe.2024252",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "HGM Qamar",
+        "MF Qureshi",
+        "Z Mushtaq",
+        "Z Zubariah",
+        "MZU Rehman",
+        "..."
+      ],
+      "authorsTruncated": true,
+      "scholarVenue": "Math. Biosci. Eng 21 (4), 5712-5734",
+      "citations": 13,
+      "citationsCombined": false
+    },
+    {
+      "id": 10,
+      "title": "Automated lumpy skin grading in bovine images using novel deep convolutional neural networks",
+      "venue": "Multimedia Tools and Applications",
+      "year": 2025,
+      "type": "journal",
+      "area": "Computer vision",
+      "doi": "10.1007/s11042-024-20395-5",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": ["AM Muhammad", "MZ ur Rehman", "Z Mushtaq", "MF Qureshi"],
+      "authorsTruncated": false,
+      "scholarVenue": "Multimedia Tools and Applications 84 (19), 21721-21746",
+      "citations": 6,
+      "citationsCombined": false
+    },
+    {
+      "id": 11,
+      "title": "Augmenting aquaculture efficiency through involutional neural networks and self-attention for oplegnathus punctatus feeding intensity classification from log mel spectrograms",
+      "venue": "Animals",
+      "year": 2024,
+      "type": "journal",
+      "area": "Aquaculture AI",
+      "doi": "10.3390/ani14111690",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "U Iqbal",
+        "D Li",
+        "Z Du",
+        "M Akhter",
+        "Z Mushtaq",
+        "MF Qureshi",
+        "HAU Rehman"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "Animals 14 (11), 1690",
+      "citations": 21,
+      "citationsCombined": false
+    },
+    {
+      "id": 12,
+      "title": "Improving thyroid disorder diagnosis via ensemble stacking and bidirectional feature selection",
+      "venue": "Computers, Materials & Continua",
+      "year": 2024,
+      "type": "journal",
+      "area": "Clinical machine learning",
+      "doi": "10.32604/cmc.2024.047621",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "MA Latif",
+        "Z Mushtaq",
+        "S Arif",
+        "S Rehman",
+        "MF Qureshi",
+        "NA Samee",
+        "..."
+      ],
+      "authorsTruncated": true,
+      "scholarVenue": "Computers, Materials & Continua 78 (3), 4225-4241",
+      "citations": 17,
+      "citationsCombined": true
+    },
+    {
+      "id": 13,
+      "title": "Real-time weed segmentation in tobacco crops utilizing deep learning on a jetson nano",
+      "venue": "ICECT",
+      "year": 2024,
+      "type": "conference",
+      "area": "Agricultural AI",
+      "doi": "10.1109/ICECT61618.2024.10581350",
+      "status": "Published",
+      "contribution": "First author",
+      "authors": [
+        "MF Qureshi",
+        "F Amin",
+        "Z Mushtaq",
+        "M Ali",
+        "AA Haris",
+        "AY Rana"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "2024 International Conference on Engineering & Computing Technologies (ICECT …",
+      "citations": 10,
+      "citationsCombined": false
+    },
+    {
+      "id": 14,
+      "title": "Design and development of a soft robotic gripper for precision control for biomedical applications",
+      "venue": "ICECT",
+      "year": 2024,
+      "type": "conference",
+      "area": "Robotics",
+      "doi": "10.1109/ICECT61618.2024.10581172",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "MQ Shahid",
+        "F Amin",
+        "AA Haris",
+        "H Al Faisal",
+        "A Imran",
+        "MF Qureshi"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "2024 International Conference on Engineering & Computing Technologies (ICECT …",
+      "citations": 7,
+      "citationsCombined": false
+    },
+    {
+      "id": 15,
+      "title": "Efficient energy management for household: Optimization-based integration of distributed energy resources in smart grid",
+      "venue": "IEEE Access",
+      "year": 2023,
+      "type": "journal",
+      "area": "Power systems",
+      "doi": "10.1109/ACCESS.2023.3303204",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "Q Akhter",
+        "A Siddique",
+        "SA Alqahtani",
+        "A Mahmood",
+        "M Alam",
+        "Z Mushtaq",
+        "..."
+      ],
+      "authorsTruncated": true,
+      "scholarVenue": "IEEE Access 11, 85716-85727",
+      "citations": 28,
+      "citationsCombined": false
+    },
+    {
+      "id": 16,
+      "title": "Automated uterine fibroids detection in ultrasound images using deep convolutional neural networks",
+      "venue": "Healthcare",
+      "year": 2023,
+      "type": "journal",
+      "area": "Medical imaging",
+      "doi": "10.3390/healthcare11101493",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "A Shahzad",
+        "A Mushtaq",
+        "AQ Sabeeh",
+        "YY Ghadi",
+        "Z Mushtaq",
+        "S Arif",
+        "..."
+      ],
+      "authorsTruncated": true,
+      "scholarVenue": "Healthcare 11 (10), 1493",
+      "citations": 52,
+      "citationsCombined": false
+    },
+    {
+      "id": 17,
+      "title": "Enhancing ductal carcinoma classification using transfer learning with 3D U-net models in breast cancer imaging",
+      "venue": "Applied Sciences",
+      "year": 2023,
+      "type": "journal",
+      "area": "Medical imaging",
+      "doi": "10.3390/app13074255",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "S Khalil",
+        "U Nawaz",
+        "Zubariah",
+        "Z Mushtaq",
+        "S Arif",
+        "MZ ur Rehman",
+        "..."
+      ],
+      "authorsTruncated": true,
+      "scholarVenue": "Applied Sciences 13 (7), 4255",
+      "citations": 38,
+      "citationsCombined": false
+    },
+    {
+      "id": 18,
+      "title": "E2CNN: An efficient concatenated CNN for classification of surface EMG extracted from upper limb",
+      "venue": "IEEE Sensors Journal",
+      "year": 2023,
+      "type": "journal",
+      "area": "Biomedical AI",
+      "doi": "10.1109/JSEN.2023.3255408",
+      "status": "Published",
+      "contribution": "First author",
+      "authors": ["MF Qureshi", "Z Mushtaq", "MZU Rehman", "EN Kamavuako"],
+      "authorsTruncated": false,
+      "scholarVenue": "IEEE Sensors Journal 23 (8), 8989-8996",
+      "citations": 65,
+      "citationsCombined": false
+    },
+    {
+      "id": 19,
+      "title": "Effective kernel‐principal component analysis based approach for wisconsin breast cancer diagnosis",
+      "venue": "Electronics Letters",
+      "year": 2023,
+      "type": "journal",
+      "area": "Clinical machine learning",
+      "doi": "10.1049/ell2.12706",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": ["Z Mushtaq", "MF Qureshi", "MJ Abbass", "SMQ Al‐Fakih"],
+      "authorsTruncated": false,
+      "scholarVenue": "Electronics Letters 59 (2), e212706",
+      "citations": 26,
+      "citationsCombined": false
+    },
+    {
+      "id": 20,
+      "title": "Efficient thyroid disorder identification with weighted voting ensemble of super learners by using adaptive synthetic sampling technique",
+      "venue": "AIMS Mathematics",
+      "year": 2023,
+      "type": "journal",
+      "area": "Clinical machine learning",
+      "doi": "10.3934/math.20231238",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "N Afshan",
+        "Z Mushtaq",
+        "FS Alamri",
+        "MF Qureshi",
+        "NA Khan",
+        "I Siddique"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "Aims Mathematics 8 (10), 24274-24309",
+      "citations": 19,
+      "citationsCombined": false
+    },
+    {
+      "id": 21,
+      "title": "Deep learning-based classification of wheat leaf diseases for edge devices",
+      "venue": "ETECTE",
+      "year": 2023,
+      "type": "conference",
+      "area": "Agricultural AI",
+      "doi": "10.1109/ETECTE59617.2023.10396676",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "AA Khan",
+        "S Raza",
+        "MF Qureshi",
+        "Z Mushtaq",
+        "M Taha",
+        "F Amin"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "2023 2nd International Conference on Emerging Trends in Electrical, Control …",
+      "citations": 10,
+      "citationsCombined": false
+    },
+    {
+      "id": 22,
+      "title": "Discrete wavelet transform for laser diode self-mixing interferometry processing for vibrations measurement",
+      "venue": "ETECTE",
+      "year": 2023,
+      "type": "conference",
+      "area": "Signal processing",
+      "doi": "10.1109/ETECTE59617.2023.10396663",
+      "status": "Published",
+      "contribution": "First author",
+      "authors": ["MF Qureshi", "Z Mushtaq", "MZU Rehman", "F Amin"],
+      "authorsTruncated": false,
+      "scholarVenue": "2023 2nd International Conference on Emerging Trends in Electrical, Control …",
+      "citations": 1,
+      "citationsCombined": false
+    },
+    {
+      "id": 23,
+      "title": "Spectral image-based multiday surface electromyography classification of hand motions using CNN for human–computer interaction",
+      "venue": "IEEE Sensors Journal",
+      "year": 2022,
+      "type": "journal",
+      "area": "Biomedical AI",
+      "doi": "10.1109/JSEN.2022.3204121",
+      "status": "Published",
+      "contribution": "First author",
+      "authors": ["MF Qureshi", "Z Mushtaq", "MZ ur Rehman", "EN Kamavuako"],
+      "authorsTruncated": false,
+      "scholarVenue": "IEEE Sensors Journal 22 (21), 20676-20683",
+      "citations": 53,
+      "citationsCombined": true
+    },
+    {
+      "id": 24,
+      "title": "Leveraging training strategies of artificial neural network for classification of multiday electromyography signals",
+      "venue": "ETECTE",
+      "year": 2022,
+      "type": "conference",
+      "area": "Biomedical AI",
+      "doi": "10.1109/ETECTE55893.2022.10007103",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "M Akmal",
+        "S Khalid",
+        "M Moiz",
+        "MJ Abbass",
+        "MF Qureshi",
+        "Z Mushtaq"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "2022 International conference on emerging trends in electrical, control, and …",
+      "citations": 7,
+      "citationsCombined": false
+    },
+    {
+      "id": 25,
+      "title": "Estimation of Real-Time Wheeled Mobile Robot (Differential Drive) Motion & Pose with Obstacle Avoidance",
+      "venue": "IBCAST",
+      "year": 2022,
+      "type": "conference",
+      "area": "Robotics",
+      "doi": "10.1109/IBCAST54850.2022.9990172",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": ["Z Mushtaq", "MF Qureshi", "A Zohaib", "M Akmal"],
+      "authorsTruncated": false,
+      "scholarVenue": "2022 19th International Bhurban Conference on Applied Sciences and …",
+      "citations": 2,
+      "citationsCombined": false
+    },
+    {
+      "id": 26,
+      "title": "SVM-based real-time classification of prosthetic fingers using myo armband-acquired electromyography data",
+      "venue": "BIBE",
+      "year": 2021,
+      "type": "conference",
+      "area": "Biomedical AI",
+      "doi": "10.1109/BIBE52308.2021.9635461",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": ["M Akmal", "MF Qureshi", "F Amin", "MZU Rehman", "IK Niazi"],
+      "authorsTruncated": false,
+      "scholarVenue": "2021 IEEE 21st international conference on bioinformatics and bioengineering …",
+      "citations": 21,
+      "citationsCombined": false
+    },
+    {
+      "id": 27,
+      "title": "Spectral processing of self-mixing interferometric signal phase for improved vibration sensing under weak-and moderate-feedback regime",
+      "venue": "IEEE Sensors Journal",
+      "year": 2019,
+      "type": "journal",
+      "area": "Signal processing",
+      "doi": "10.1109/JSEN.2019.2935087",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": [
+        "U Zabit",
+        "OD Bernal",
+        "S Amin",
+        "MF Qureshi",
+        "AH Khawaja",
+        "T Bosch"
+      ],
+      "authorsTruncated": false,
+      "scholarVenue": "IEEE Sens. J. 19 (23), 11151-11158",
+      "citations": 54,
+      "citationsCombined": false
+    },
+    {
+      "id": 28,
+      "title": "Android based internet accessible infant incubator",
+      "venue": "ICICT",
+      "year": 2019,
+      "type": "conference",
+      "area": "IoT",
+      "doi": "10.1109/ICICT47744.2019.9001985",
+      "status": "Published",
+      "contribution": "Co-author",
+      "authors": ["S Inam", "MF Qureshi", "F Amin", "M Akmal", "MZ Rehman"],
+      "authorsTruncated": false,
+      "scholarVenue": "2019 8th International Conference on Information and Communication …",
+      "citations": 18,
+      "citationsCombined": false
+    }
+  ],
+  "projects": [
+    {
+      "name": "Muhammad Zulqarnain",
+      "registration": "537460",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Adaptive Context Management for Local Coding Agents",
+      "role": "Supervisor / Advisor",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Khurram Sami",
+      "registration": "536883",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Deep Learning Framework for Earthquake Detection Using VLF Radio Signals",
+      "role": "Supervisor / Advisor",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Afham Ahmed",
+      "registration": "538758",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Design of Neuro Symbolic and Probabilistic Model for Reliable Equation Discovery",
+      "role": "Supervisor / Advisor",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Sheraz Siddiqui",
+      "registration": "578200",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Multimodal AI for Communication Intent Recognition",
+      "role": "Supervisor / Advisor",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Muhammad Adil",
+      "registration": "538512",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Nano-Recursive VLM for High Altitude UAV Surveillance",
+      "role": "Supervisor / Advisor",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Muhammad Farhan",
+      "registration": "539906",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Selective Verification of AI Agent Completion Claims in Clinical Records",
+      "role": "Supervisor / Advisor",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Sadia Amin",
+      "registration": "538646",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Self-Supervised Adaptation of Time-Series Foundation Models for Air Quality Forecasting",
+      "role": "Supervisor / Advisor",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "M Umer",
+      "registration": "578199",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "UAV Telemetry Anomaly Diagnosis with Sensor-Group Intervention",
+      "role": "Supervisor / Advisor",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Syed Mubashir Shah",
+      "registration": "534130",
+      "batch": "PNEC/MSEE/2024F",
+      "title": "A Deep Learning based Framework for Infrared Small Object Segmentation in Naval Defense Systems",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Khulood Erfan",
+      "registration": "538013",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "A Unified Evaluation Protocol for LLM Debiasing: Comparing Contrastive, Steering, and Preference-Based Methods Under Format Sensitivity",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Fiza Karim Palijo",
+      "registration": "494768",
+      "batch": "PNEC/MSAI/2024F",
+      "title": "Benchmarking Vision Transformer Variants Against CNNs for Multi-Label Photovoltaic Fault Detection and Cross-Domain Adaptation",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Khizra Arshad",
+      "registration": "536750",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Deep Learning Frameworks for High-Resolution RF Measurement and Spectrum Fault Diagnosis via LLM-Driven RF Tokenization",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Rehan Ali Syed",
+      "registration": "578192",
+      "batch": "PNEC/MSDS/2025F",
+      "title": "Design of Dynamic Temporal Grounding Mechanism for Gloss-Free Sign Language Translation",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Usman Aslam",
+      "registration": "578193",
+      "batch": "PNEC/MSDS/2025F",
+      "title": "Generative AI-Based Adaptive Filter Synthesis for Micro-Doppler Enhancement And Clutter Suppression",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Muhammad Hanzalah",
+      "registration": "537986",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Hardware-Accelerated Neuro-Symbolic Predictive Control for Vision-Guided Autonomous UAVs",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Amna Nadeem",
+      "registration": "538055",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Mitigating Shared-Misreading Failures in LLM-Generated Code through Role-Separated Test Authorship",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Abdul Hadi Bhatti Rajput",
+      "registration": "537990",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Neuro-symbolic and compositional framework for Lexical and semantic aware adaptive tokenization",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Mehwish Nadeem",
+      "registration": "537667",
+      "batch": "PNEC/MSAI/2025F",
+      "title": "Physics Informed Deep Generative Framework for Ship Hull Form Design",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "MS"
+    },
+    {
+      "name": "Muhammad Adeel",
+      "registration": "491868",
+      "batch": "PNEC/PHDEE/2024S",
+      "title": "Physics Informed Evaluation of Large Language Models for Autonomous Systems",
+      "role": "GEC Member",
+      "status": "Active",
+      "degree": "PhD"
+    }
+  ],
+  "phdSupervisions": [
+    {
+      "name": "Rabail Khowaja",
+      "topic": "AI-enabled rehabilitation and neural engineering (prospective research direction)",
+      "institution": "NUST, PNEC",
+      "degree": "PhD EE",
+      "role": "Lead Supervisor",
+      "status": "In progress"
+    },
+    {
+      "name": "Akbare Yaqub",
+      "topic": "Deep Learning-based Classification of Cardiac Pathologies using Phonocardiogram Analysis",
+      "institution": "Riphah International University",
+      "degree": "PhD EE",
+      "role": "Co-Supervisor",
+      "status": "In progress"
+    },
+    {
+      "name": "Shaima Sani",
+      "topic": "Deep learning based Distinct Material Classification by Sound Signals",
+      "institution": "Riphah International University",
+      "degree": "PhD EE",
+      "role": "Co-Supervisor",
+      "status": "In progress"
+    },
+    {
+      "name": "Abdul Malik Muhammad",
+      "topic": "Cross-Species Computational Dermatology: Multi-Scale Hybrid Architectures for Automated Pathology Characterization and Severity Grading in Biomedical Imaging",
+      "institution": "Riphah International University",
+      "degree": "PhD BME",
+      "role": "Co-Supervisor",
+      "status": "In progress"
+    }
+  ],
+  "researchAreas": [
+    {
+      "title": "Biomedical & wearable intelligence",
+      "description": "Surface EMG, EEG and heart-sound analysis for human–computer interaction, longitudinal sensing and clinical machine learning.",
+      "tags": [
+        "EMG / EEG / PCG",
+        "Wearable sensing",
+        "Cross-session robustness"
+      ]
+    },
+    {
+      "title": "Hardware-aware Edge AI",
+      "description": "Efficient deep-learning architectures and real-time inference across microcontrollers, embedded SBCs and heterogeneous CPU/GPU platforms.",
+      "tags": [
+        "Model optimization",
+        "Embedded deployment",
+        "Hardware–software co-design"
+      ]
+    },
+    {
+      "title": "Reliable & autonomous AI",
+      "description": "Current supervised projects investigate agent verification, equation discovery, multimodal intent recognition and UAV perception and diagnostics.",
+      "tags": ["AI agents", "Neuro-symbolic methods", "Autonomous systems"]
+    },
+    {
+      "title": "Intelligent sensing & applied ML",
+      "description": "Acoustic material classification, aquaculture monitoring, agricultural sensing and machine learning for power and healthcare systems.",
+      "tags": ["Acoustic sensing", "IoT", "Applied machine learning"]
+    }
+  ],
+  "researchPipeline": ["Sense", "Represent", "Learn", "Optimize", "Deploy"],
+  "academicJourney": [
+    {
+      "period": "Feb 2026 – Present",
+      "title": "Associate Professor & Head of AI/ML Research Cluster",
+      "institution": "NUST · PNEC, Karachi",
+      "description": "Lead the AI/ML research stream within EPE; teach MS AI, MS Data Science, MS EE and BS EE cohorts; contribute to faculty hiring and the AI implementation roadmap for naval training.",
+      "type": "position"
+    },
+    {
+      "period": "Sep 2024 – Feb 2026",
+      "title": "Assistant Professor & Senior Researcher",
+      "institution": "Namal University, Mianwali",
+      "description": "Combined electrical-engineering teaching with research leadership at the Centre for AI & Big Data; mentored researchers and organized three national training schools in 2025.",
+      "type": "position"
+    },
+    {
+      "period": "May 2015 – Aug 2024",
+      "title": "Senior Lecturer, Electrical & Computer Engineering",
+      "institution": "Riphah International University, Islamabad",
+      "description": "Taught engineering courses, supervised applied AI and biomedical projects, and contributed to curriculum development in robotics and intelligent systems.",
+      "type": "position"
+    },
+    {
+      "period": "2019 – 2024",
+      "title": "PhD in Electrical Engineering",
+      "institution": "Riphah International University, Islamabad",
+      "description": "Specialization: Deep Learning. Dissertation: Classification of Physiological Signals for Human Computer Interaction using Deep Learning.",
+      "type": "education"
+    },
+    {
+      "period": "2012 – 2014",
+      "title": "MS in Electrical Engineering",
+      "institution": "Riphah International University, Islamabad",
+      "description": "Specialization: Digital Signal Processing. Dissertation: Time-Frequency Signal Processing of Self-Mixing Laser Sensor for Vibration Measurement.",
+      "type": "education"
+    },
+    {
+      "period": "2008 – 2012",
+      "title": "BS in Electronics Engineering",
+      "institution": "International Islamic University, Islamabad",
+      "description": "Dissertation: Automatic Secured Storage Machine.",
+      "type": "education"
+    }
+  ],
+  "awards": [
+    {
+      "year": 2025,
+      "title": "MSCA Seal of Excellence",
+      "description": "European Commission · Marie Skłodowska-Curie Actions Postdoctoral Fellowships. Proposal evaluation score: 95.2/100.",
+      "type": "Award"
+    },
+    {
+      "year": 2025,
+      "title": "SoilSense Pakistan",
+      "description": "IoT System for Optimized & Sustainable Farming · AgriFusion Seed Grant, ORIC-Namal University. Co-Principal Investigator.",
+      "amount": "PKR 200,000",
+      "type": "Grant"
+    },
+    {
+      "year": 2024,
+      "title": "AI for early cardiopulmonary diagnosis",
+      "description": "FYDP Financing · Pakistan Engineering Council.",
+      "amount": "PKR 100,000",
+      "type": "Grant"
+    },
+    {
+      "year": 2022,
+      "title": "UAV for pesticide spraying",
+      "description": "National Grassroot ICT Research Initiative · Ignite–National Technology Fund.",
+      "amount": "PKR 70,000",
+      "type": "Grant"
+    },
+    {
+      "year": 2022,
+      "title": "Design and fabrication of an electric bike",
+      "description": "National Grassroot ICT Research Initiative · Ignite–National Technology Fund.",
+      "amount": "PKR 70,000",
+      "type": "Grant"
+    },
+    {
+      "year": 2018,
+      "title": "IoT-based health monitoring",
+      "description": "National Grassroot ICT Research Initiative · Ignite–National Technology Fund.",
+      "amount": "PKR 70,000",
+      "type": "Grant"
+    }
+  ],
+  "patent": {
+    "title": "Digital Fuel Flow Sensor",
+    "status": "Application submitted to IPO-Pakistan; Stage 1 cleared",
+    "authors": "Qureshi, M.F.; Khalid, S.; Javaid, M.H.B.; Nadeem, M.S.; Khan, H.M.",
+    "description": "A magnetic rotor and Hall-effect sensor measure fuel intake; an ESP32 sends measurements through MQTT to a dashboard for transparent refuelling and fleet monitoring."
+  },
+  "collaborations": [
+    {
+      "institution": "King’s College London",
+      "country": "United Kingdom"
+    },
+    {
+      "institution": "Universidad Politécnica de Madrid",
+      "country": "Spain"
+    },
+    {
+      "institution": "University of Birmingham",
+      "country": "United Kingdom"
+    },
+    {
+      "institution": "University of Southern Denmark",
+      "country": "Denmark"
+    },
+    {
+      "institution": "King Faisal University",
+      "country": "Saudi Arabia"
+    },
+    {
+      "institution": "China Agricultural University",
+      "country": "China"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Machine learning & deep learning",
+      "level": "Practice",
+      "items": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "PyTorch",
+        "CNNs / RNNs",
+        "Representation learning"
+      ]
+    },
+    {
+      "title": "Signal processing & sensing",
+      "level": "Practice",
+      "items": [
+        "MATLAB",
+        "Fourier / time-frequency analysis",
+        "Filtering & feature extraction",
+        "EMG / EEG / PCG",
+        "Wearable sensing"
+      ]
+    },
+    {
+      "title": "Embedded & Edge AI",
+      "level": "Practice",
+      "items": [
+        "NVIDIA Jetson",
+        "ESP32",
+        "Embedded SBCs",
+        "C/C++",
+        "Real-time classification"
+      ]
+    },
+    {
+      "title": "Research software & analysis",
+      "level": "Practice",
+      "items": [
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+        "Git / GitHub",
+        "LaTeX",
+        "Experimental design"
+      ]
+    },
+    {
+      "title": "AI compilers & acceleration",
+      "level": "Developing expertise",
+      "items": ["MLIR", "IREE", "RISC-V", "FPGA", "Custom AI accelerators"]
+    },
+    {
+      "title": "Academic leadership",
+      "level": "Practice",
+      "items": [
+        "Research mentorship",
+        "Grant writing",
+        "Project management",
+        "Curriculum development",
+        "Industry collaboration"
+      ]
+    }
+  ],
+  "teaching": {
+    "philosophy": "Develop analytical, research-oriented and industry-ready graduates through hands-on projects, evolving curricula and sustained mentorship.",
+    "courses": [
+      "Signals and Systems",
+      "Introduction to Machine Learning",
+      "Data Structures & Algorithms"
+    ],
+    "programmes": [
+      "MS Artificial Intelligence",
+      "MS Data Science",
+      "MS Electrical Engineering",
+      "BS Electrical Engineering"
+    ],
+    "leadership": "Organized three national-level schools in August 2025 covering supercomputing and AI, high-performance computing, and indigenous secure digital-system design."
+  },
+  "undergraduateProjects": [
+    {
+      "title": "ML-based Hand Gesture Recognition for Speech Impairment using Accelerometers",
+      "period": "2025–2026"
+    },
+    {
+      "title": "PCG based Early Cardiopulmonary Assistive using RISC-V SBC",
+      "period": "2025–2026"
+    },
+    {
+      "title": "IoT Based Crop Monitoring System for Namal’s AgriTech Farm",
+      "period": "2024–2025"
+    },
+    {
+      "title": "Sign Language Translator using Accelerometers and Deep Learning",
+      "period": "2024–2025"
+    },
+    {
+      "title": "Blockchain-Backed Fuel Monitoring for Fraud Detection During Refuelling",
+      "period": "2023–2024"
+    }
+  ],
+  "contentSources": {
+    "publications": "User-supplied Google Scholar text; DOI and acceptance details from the 2026 CV.",
+    "projects": "User-confirmed current project list; supersedes CV MS supervision records.",
+    "profile": "Uploaded CVs and resumes, with institutional email from the resumes."
+  }
+}
