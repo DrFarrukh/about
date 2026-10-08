@@ -35,11 +35,30 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pages: write
+      actions: read
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # Existing branch-based Pages builds can otherwise overwrite this artifact.
+      # Repository administrators may switch Settings > Pages to GitHub Actions;
+      # until then, publish after the automatic legacy build has finished.
+      - name: Wait for any branch-based Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 60); do
+            pending=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${GITHUB_SHA}&per_page=100" \
+              --jq '[.workflow_runs[] | select(.name == "pages build and deployment" and .status != "completed")] | length')
+            if [ "$pending" = "0" ]; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Timed out waiting for the existing branch-based Pages deployment."
+          exit 1
       - name: Deploy Pages artifact
         id: deployment
         uses: actions/deploy-pages@v4

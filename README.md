@@ -31,7 +31,7 @@ The public CV is generated from this corrected content, rather than publishing a
 
 ## GitHub Pages
 
-`.github/workflows/pages.yml` installs locked dependencies, runs content checks, builds the Vite app with base `/about/`, and deploys `mfq-portfolio/dist`. In repository **Settings → Pages**, select **GitHub Actions** as the source. Pushes to `main` and manual workflow dispatches trigger deployment. The `github-pages` environment must allow deployment from `main`.
+`.github/workflows/pages.yml` installs locked dependencies, runs content checks, builds the Vite app with base `/about/`, and deploys `mfq-portfolio/dist`. Recommended: in repository **Settings → Pages**, select **GitHub Actions** as the source. If the existing source remains branch-based, the workflow waits for its automatic Pages build to finish before deploying the portfolio artifact, preventing the branch build from overwriting the app. Pushes to `main` and manual workflow dispatches trigger deployment. The `github-pages` environment must allow deployment from `main`.
 
 Deployment needs repository push permission, Actions enabled, and Pages enabled. Local validation does not prove a remote deployment succeeded: check the workflow result and the public site after deployment.
 
