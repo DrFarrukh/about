@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -8,8 +8,11 @@ import {
   FileDown,
   GitBranch as Github,
   Menu,
+  Monitor,
+  Moon,
   Search,
   Signal,
+  Sun,
   X,
 } from "lucide-react";
 import { portfolioData as data } from "./data/portfolioData.js";
@@ -50,6 +53,10 @@ function SectionHeading({ number, eyebrow, title, children }) {
 
 function Navigation() {
   const [open, setOpen] = useState(false);
+  const { theme, preference } = useSyncExternalStore(
+    window.portfolioTheme.subscribe,
+    window.portfolioTheme.getSnapshot,
+  );
   useEffect(() => {
     const close = (event) => {
       if (event.key === "Escape") setOpen(false);
@@ -64,15 +71,6 @@ function Navigation() {
           FQ<span>.</span>
           <span className="brand-label">RESEARCH & INTELLIGENCE</span>
         </a>
-        <button
-          className="menu-toggle"
-          aria-expanded={open}
-          aria-controls="nav-links"
-          aria-label={open ? "Close navigation" : "Open navigation"}
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X /> : <Menu />}
-        </button>
         <div id="nav-links" className={`nav-links ${open ? "is-open" : ""}`}>
           {nav.map(([label, id]) => (
             <a key={id} href={`#${id}`} onClick={() => setOpen(false)}>
@@ -86,6 +84,42 @@ function Navigation() {
           >
             Scholar <ArrowUpRight size={15} />
           </a>
+        </div>
+        <div className="nav-actions">
+          <button
+            className="theme-toggle"
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            onClick={() =>
+              window.portfolioTheme.setPreference(
+                theme === "dark" ? "light" : "dark",
+              )
+            }
+          >
+            {theme === "dark" ? <Sun size={19} /> : <Moon size={19} />}
+          </button>
+          <button
+            className="theme-system"
+            aria-label="Use system theme"
+            aria-pressed={preference === "system"}
+            title={
+              preference === "system"
+                ? "Following system theme"
+                : "Use system theme"
+            }
+            onClick={() => window.portfolioTheme.setPreference("system")}
+          >
+            <Monitor size={17} />
+          </button>
+          <button
+            className="menu-toggle"
+            aria-expanded={open}
+            aria-controls="nav-links"
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <X /> : <Menu />}
+          </button>
         </div>
       </nav>
     </header>

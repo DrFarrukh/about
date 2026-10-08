@@ -18,6 +18,10 @@ npm run preview
 
 `src/data/portfolio.json` is the content source. Both the portfolio and generated `public/cv.html` use it. The build also creates redirects for legacy `research.html`, `publications.html`, `projects.html`, and `contact.html` URLs. Generated public pages and `dist/` are ignored; do not edit them directly.
 
+## Appearance
+
+The portfolio and on-screen academic CV follow the operating system’s light/dark setting by default. Use the sun/moon button for a one-click override; the choice is remembered locally. The monitor button restores automatic system-following mode. The CV always prints with dark text on white paper.
+
 ## Content provenance
 
 - The eight uploaded CV/resume documents supply appointments, education, technical skills, grants, patent status, and collaboration institutions. The resumes supply the institutional email and GitHub link.
