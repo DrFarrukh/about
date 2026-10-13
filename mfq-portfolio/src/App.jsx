@@ -1,4 +1,4 @@
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -162,7 +162,7 @@ function Hero() {
       <div
         className="system-visual"
         role="img"
-        aria-label="Research connects sensing, representation, learning, optimization and deployment"
+        aria-label="Hardware-aware intelligence for edge AI: physical sensing, learned representations, and embedded deployment, balancing accuracy, latency, memory, and energy."
       >
         <div className="visual-top">
           <span>HARDWARE-AWARE INTELLIGENCE</span>
@@ -284,6 +284,7 @@ function Publications() {
   const [type, setType] = useState("all");
   const [status, setStatus] = useState("all");
   const [sort, setSort] = useState("year");
+  const searchInput = useRef(null);
   const years = [...new Set(data.publications.map((p) => p.year))].sort(
     (a, b) => b - a,
   );
@@ -340,6 +341,7 @@ function Publications() {
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Search title, venue, topic or DOI…"
                   type="search"
+                  ref={searchInput}
                 />
               </label>
               <label>
@@ -470,6 +472,7 @@ function Publications() {
                     setYear("all");
                     setType("all");
                     setStatus("all");
+                    searchInput.current?.focus();
                   }}
                 >
                   Clear all filters <ArrowRight size={16} />
@@ -497,6 +500,7 @@ function Publications() {
 function Projects() {
   const [role, setRole] = useState("Supervisor / Advisor");
   const [query, setQuery] = useState("");
+  const searchInput = useRef(null);
   const records = data.projects.filter(
     (p) =>
       p.role === role &&
@@ -547,6 +551,7 @@ function Projects() {
                 placeholder="Search research topic…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
+                ref={searchInput}
               />
             </label>
           </div>
@@ -583,7 +588,10 @@ function Projects() {
                   type="button"
                   className="text-link"
                   style={{ marginTop: "16px", cursor: "pointer", background: "none", border: "none", padding: 0 }}
-                  onClick={() => setQuery("")}
+                  onClick={() => {
+                    setQuery("");
+                    searchInput.current?.focus();
+                  }}
                 >
                   Clear search <ArrowRight size={16} />
                 </button>
