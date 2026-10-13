@@ -161,6 +161,7 @@ function Hero() {
       </div>
       <div
         className="system-visual"
+        role="img"
         aria-label="Research connects sensing, representation, learning, optimization and deployment"
       >
         <div className="visual-top">
@@ -455,10 +456,25 @@ function Publications() {
               ))}
             </div>
             {records.length === 0 && (
-              <p className="empty-state">
-                No matching publications. Try another search or clear the
-                filters.
-              </p>
+              <div className="empty-state">
+                <p>
+                  No matching publications. Try another search or clear the
+                  filters.
+                </p>
+                <button
+                  type="button"
+                  className="text-link"
+                  style={{ marginTop: "16px", cursor: "pointer", background: "none", border: "none", padding: 0 }}
+                  onClick={() => {
+                    setQuery("");
+                    setYear("all");
+                    setType("all");
+                    setStatus("all");
+                  }}
+                >
+                  Clear all filters <ArrowRight size={16} />
+                </button>
+              </div>
             )}
             <p className="source-note">
               Publication years and citation metrics follow the Google Scholar
@@ -560,7 +576,19 @@ function Projects() {
             ))}
           </div>
           {records.length === 0 && (
-            <p className="empty-state">No matching projects.</p>
+            <div className="empty-state">
+              <p>No matching projects.</p>
+              {query && (
+                <button
+                  type="button"
+                  className="text-link"
+                  style={{ marginTop: "16px", cursor: "pointer", background: "none", border: "none", padding: 0 }}
+                  onClick={() => setQuery("")}
+                >
+                  Clear search <ArrowRight size={16} />
+                </button>
+              )}
+            </div>
           )}
           <p className="source-note">
             GEC participation is committee service. These projects are listed
