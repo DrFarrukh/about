@@ -16,6 +16,12 @@ import {
   X,
 } from "lucide-react";
 import { portfolioData as data } from "./data/portfolioData.js";
+import {
+  publicFile,
+  getPublished,
+  getAccepted,
+  publicationDate,
+} from "./utils.js";
 
 const external = { target: "_blank", rel: "noopener noreferrer" };
 const nav = [
@@ -26,16 +32,9 @@ const nav = [
   ["CV", "cv"],
   ["Contact", "contact"],
 ];
-const publicFile = (file) => `${import.meta.env.BASE_URL}${file}`;
-const published = data.publications.filter((p) => p.status === "Published");
-const accepted = data.publications.filter((p) => p.status === "Accepted");
-const publicationDate = (date) =>
-  new Intl.DateTimeFormat("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(`${date}T00:00:00Z`));
+
+const published = getPublished(data.publications);
+const accepted = getAccepted(data.publications);
 
 function SectionHeading({ number, eyebrow, title, children }) {
   return (
@@ -154,7 +153,7 @@ function Hero() {
           <a className="button primary" href="#publications">
             Explore my research <ArrowRight size={17} />
           </a>
-          <a className="button secondary" href={publicFile("cv.html")}>
+          <a className="button secondary" href={publicFile("cv.html", import.meta.env.BASE_URL)}>
             Academic CV <FileDown size={17} />
           </a>
         </div>
@@ -627,7 +626,7 @@ function CV() {
         eyebrow="ACADEMIC JOURNEY"
         title="Research. Teaching. Leadership."
       >
-        <a className="button secondary" href={publicFile("cv.html")}>
+        <a className="button secondary" href={publicFile("cv.html", import.meta.env.BASE_URL)}>
           View & print academic CV <FileDown size={17} />
         </a>
       </SectionHeading>
@@ -800,7 +799,7 @@ function Contact() {
           <a href={data.personal.github} {...external}>
             <Github size={16} /> GitHub
           </a>
-          <a href={publicFile("cv.html")}>
+          <a href={publicFile("cv.html", import.meta.env.BASE_URL)}>
             Academic CV <FileDown size={16} />
           </a>
         </div>
